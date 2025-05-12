@@ -1,15 +1,20 @@
 #ifndef SBBayNguoi_H
-#define SBBayNguoi_H
+#define SB#ifndef SanCauLong_H
+#define SanCauLong_H
 
-#include <string>
+#include <HeThongSanTheThao.h>
 using namespace std;
 
-class SanBongBayNguoi 
+class SanBongBayNguoi:public HeThongSanTheThao
 {
 private:
     
+
 public:
-virtual void display();
+
+virtual void  output();
+
+virtual void output();
     
 };
 

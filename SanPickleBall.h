@@ -1,16 +1,19 @@
-#ifndef SanPickleBall_H
-#define SanPickleBall_H
+#ifndef SanCauLong_H
+#define SanCauLong_H
 
-#include <string>
+#include <HeThongSanTheThao.h>
 using namespace std;
 
-class SanPickleBall
+class SanPickleBall:public HeThongSanTheThao
 {
 private:
     
 
 public:
-virtual void display();
+
+virtual void  output();
+
+virtual void output();
     
 };
 
