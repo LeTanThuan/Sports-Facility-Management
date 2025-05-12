@@ -7,13 +7,9 @@ using namespace std;
 class SanBongNamNguoi 
 {
 private:
-    
 
 public:
-virtual void display()
-{
-
-}
+virtual void display();
     
 };
 

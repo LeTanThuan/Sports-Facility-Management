@@ -8,12 +8,8 @@ class SanBongBayNguoi
 {
 private:
     
-
 public:
-virtual void display()
-{
-
-}
+virtual void display();
     
 };
 
