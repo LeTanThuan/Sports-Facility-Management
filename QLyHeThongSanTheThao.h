@@ -6,6 +6,7 @@ using namespace std;
 
 class QlyHeThongSanTheThao
 {
+    public:
     void themSan();
     
     void hienthi_TatCaSan();

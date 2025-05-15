@@ -1,40 +1,37 @@
-#ifndef SBBayNguoi_H
-#define SanCauLong_H
+#ifndef SanBongBayNguoi_H
+#define SanBongBayNguoi_H
 
-#include <HeThongSanTheThao.h>
+#include "HeThongSanTheThao.h"
+#include <iostream>
 using namespace std;
-
 class SanBongBayNguoi:public HeThongSanTheThao
 {
-private:
-    string loaiSan;
-    string soluongCotLuoi;
-    string docaoCuaLuoi;
-    string matSan;
-    string mucChongTham;
-    string coThamTruot;
-    string soLuongVot;
-    string soLuongCau;
-    string coPhongKhoiDong;
-    string loaivotPhuHop;
-    string coPhongNghi;
-    string soluong_NguoiToiDa;
-    string lichsu_SuDung;
-    string mucdo_HuHong;
-    string donvi_QuanLy;
+    private:
+        string LoaiCo;
+        string ChieuDaiSan;
+        string ChieuRongSan;
+        string LoaiBong;
+        string CoLuoi;
+        string CoHangRao;
+        string SoLuongPhatGoc;
+        string CoHeThongTuoiNuoc;
+        string CameraGiamSat;
+        string CoPhongNghi;
+        string LichThiDau;
+        string CoWifi;
+        string SoLuongTrongTai;
+        string CoHeThongAmThanh;
+        string MucDoBaoTri;
+    public:
+    SanBongBayNguoi();
+
+    SanBongBayNguoi(string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong, string CoLuoi,
+                    string CoHangRao, string SoLuongPhatGoc, string CoHeThongTuoiNuoc, string CameraGiamSat,
+                    string CoPhongNghi, string LichThiDau, string CoWifi, string SoLuongTrongTai, string CoHeThongAmThanh, string MucDoBaoTri);
     
-
-public:
-SanBongBayNguoi();
-SanBongBayNguoi(string loaiSan,
-                string soluongCotLuoi, string docaoCuaLuoi, string matSan, string mucChongTham,
-                string coThamTruot, string soLuongVot, string soLuongCau,string coPhongKhoiDong,
-                string loaivotPhuHop, string coPhongNghi, string soluong_NguoiToiDa, string lichsu_SuDung, string mucdo_HuHong,string donvi_QuanLy);
-
-virtual void  input();
-
-virtual void output();
-    
+    virtual void input();
+    virtual void output();
+    virtual bool kiemTraTinhTrang();
 };
 
 #endif
