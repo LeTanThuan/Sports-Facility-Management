@@ -3,7 +3,10 @@
 
 SanBongBayNguoi::SanBongBayNguoi()
 {
-
+    this->loaiSan = "";
+    this->soluongCotLuoi = "";
+    this->docaoCuaLuoi = "";
+    
 }
 
 SanBongBayNguoi::SanBongBayNguoi(string loaiSan,

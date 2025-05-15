@@ -1,1 +1,2 @@
-#include "SanBongBayNguoi.h"
+#include "SanBongNamNguoi.h"
+#include <iostream>
