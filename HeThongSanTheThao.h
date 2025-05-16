@@ -1,8 +1,7 @@
-#ifndef HeThongSanTheThao_H
-#define HeThongSanTheThao_H
+#ifndef HETHONGSANTHETHAO_H
+#define HETHONGSANTHETHAO_H
 
 #include <string>
-#include "QLyHeThongSanTheThao.h"
 using namespace std;
 
 class HeThongSanTheThao 
@@ -23,14 +22,52 @@ private:
     string coBaoHiem;
     string nguoiQuanLy;
     string sodienthoai_LienHe;
+    float SoGioChoi;
+    float GiaThue;
 public:
 //contructor
 HeThongSanTheThao();
 
 //contructor
 HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, string dienTich, string tinhTrang,
-                  float giathue_TheoGio, string soNguoiToiDa, string thoigian_MoCua, string thoigian_DongCua,
-                  string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoi_LienHe);                          
+                float giathue_TheoGio, string soNguoiToiDa, string thoigian_MoCua, string thoigian_DongCua,
+                string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi,float GiaThue);
+
+//set va get
+void setSoGioChoi(float SoGioChoi);
+float getSoGioChoi();
+void setGiaThue(float GiaThue);
+float getGiaThue();
+void setMaSan(string maSan);
+string getMaSan();
+void setTenSan(string tenSan);
+string getTenSan();
+void setLoaiSan(string loaiSan);
+string getLoaiSan();
+void setDiaChi(string maSan);
+string getDiaChi();
+void setDienTich(string dienTich);
+string getDienTich();
+void setTinhTrang(string tinhTrang);
+string getTinhTrang();
+void setMaSan(float giathue_TheoGio);
+float getGiaThue_TheoGio();
+void setSoNguoiToiDa(string soNguoiToiDa);
+string getSoNguoiToiDa();
+void setThoiGian_MoCua(string thoigian_MoCua);
+string getThoiGian_MoCua();
+void setThoiGian_DongCua(string thoigian_DongCua);
+string getThoiGian_DongCua();
+void setCoPhongThayDo(string coPhongThayDo);
+string getCoPhongThayDo();
+void setCoHeThongDen(string coHeThongDen);
+string getCoHeThongDen();
+void setCoBaoHim(string coBaoHiem);
+string getCoBaoHiem();
+void setNguoiQuanLy(string nguoiQuanLy);
+string getNguoiQuanLy();
+void setSoDienThoai_LienHe(string sodienthoai_LienHe);
+string getSoDienThoai_LienHe();
 
 virtual void input();
 

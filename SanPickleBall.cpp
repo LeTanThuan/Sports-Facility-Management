@@ -1,88 +1,200 @@
 #include "SanPickleBall.h"
 #include <iostream>
 using namespace std;
-SanPickleBall:: SanPickleBall()
+
+void SanPickleBall :: setSoLuongCotLuoi(string soluongCotLuoi)
 {
-    this->maSan = "";
-    this->tenSan = "";
-    this->loaiSan = "";
-    this->diaChi = "";
-    this->dienTich = "";
-    this->tinhTrang = "";
-    this->giathue_TheoGio = 0;
-    this->soNguoiToiDa = "";
-    this->thoigian_MoCua = "";
-    this->thoigian_DongCua = "";
-    this->coPhongThayDo = "";
-    this->coHeThongDen = "";
-    this->coBaoHiem = "";
-    this->nguoiQuanLy = "";
-    this->sodienthoai_LienHe = "";
+    this->soluongCotLuoi=soluongCotLuoi;
 }
-SanPickleBall::SanPickleBall(string maSan,string tenSan,string loaiSan,string diaChi,string dienTich,string tinhTrang,
-                float giathue_TheoGio, string thoigian_MoCua, string thoigian_DongCua,
-                string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoi_LienHe)
+string SanPickleBall ::getSoLuongCotLuoi()
 {
-    this->maSan = maSan;
-    this->tenSan = tenSan;
-    this->loaiSan = loaiSan;
-    this->diaChi = diaChi;
-    this->dienTich = dienTich;
-    this->tinhTrang = tinhTrang;
-    this->giathue_TheoGio = giathue_TheoGio;
-    this->soNguoiToiDa = soNguoiToiDa;
-    this->thoigian_MoCua = thoigian_MoCua;
-    this->thoigian_DongCua = thoigian_DongCua;
-    this->coPhongThayDo = coPhongThayDo;
-    this->coHeThongDen = coHeThongDen;
-    this->coBaoHiem = coBaoHiem;
-    this->nguoiQuanLy = nguoiQuanLy;
-    this->sodienthoai_LienHe = sodienthoai_LienHe;
+    return this->soluongCotLuoi;
+}
+void SanPickleBall :: setDoCaoCuaLuoi(string docaoCuaLuoi)
+{
+    this->soluongCotLuoi=docaoCuaLuoi;
+}
+string SanPickleBall ::getDoCaoCuaLuoi()
+{
+    return this->docaoCuaLuoi;
+}
+void SanPickleBall:: setMatSan(string matSan)
+{
+    this->matSan=matSan;
+}
+string SanPickleBall::getMatSan()
+{
+    return this->matSan;
+}
+
+
+void SanPickleBall:: setMucChongTham(string mucChongTham)
+{
+    this->mucChongTham=mucChongTham;
+}
+string SanPickleBall::getMucChongTham()
+{
+    return this->mucChongTham;
+}
+void SanPickleBall:: setCoThamTruot(string coThamTruot)
+{
+    this->coThamTruot=coThamTruot;
+}
+string SanPickleBall::getCoThamTruot()
+{
+    return this->coThamTruot;
+}
+void SanPickleBall:: setSoLuongVot(string soLuongVot)
+{
+    this->soLuongVot=soLuongVot;
+}
+string SanPickleBall::getSoLuongVot()
+{
+    return this->soLuongVot;
+}
+void SanPickleBall:: setSoLuongBong(string soLuongBong)
+{
+    this->soLuongBong=soLuongBong;
+}
+string SanPickleBall::getSoLuongBong()
+{
+    return soLuongBong;
+}
+void SanPickleBall:: setCoPhongKhoiDong(string coPhongKhoiDong)
+{
+    coPhongKhoiDong=coPhongKhoiDong;
+}
+string SanPickleBall::getCoPhongKhoiDong()
+{
+    return this->coPhongKhoiDong;
+}
+void SanPickleBall:: setLoaivotPhuHop(string loaivotPhuHop)
+{
+    this->loaivotPhuHop=loaivotPhuHop;
+}
+string SanPickleBall::getLoaivotPhuHop()
+{
+    return this->loaivotPhuHop;
+}
+void SanPickleBall:: setCoPhongNghi(string coPhongNghi)
+{
+    this->coPhongNghi=coPhongNghi;
+}
+string SanPickleBall::getCoPhongNghi()
+{
+    return this->coPhongNghi;
+}
+void SanPickleBall:: setSoLuong_NguoiToiDa(string soluong_NguoiToiDa)
+{
+    this->soluong_NguoiToiDa=soluong_NguoiToiDa;
+}
+string SanPickleBall::getSoLuong_NguoiToiDa()
+{
+    return this->soluong_NguoiToiDa;
+}
+void SanPickleBall:: setLichSu_SuDung(string lichsu_SuDung)
+{
+    this->lichsu_SuDung=lichsu_SuDung;
+}
+string SanPickleBall::getLichSu_SuDung()
+{
+    return this->lichsu_SuDung;
+}
+void SanPickleBall:: setMucDo_HuHong(string mucdo_HuHong)
+{
+    this->mucdo_HuHong=mucdo_HuHong;
+}
+string SanPickleBall::getMucDo_HuHong()
+{
+    return this->mucdo_HuHong;
+}
+void SanPickleBall:: setDonVi_QuanLy(string donvi_QuanLy)
+{
+    this->donvi_QuanLy=donvi_QuanLy;
+}
+string SanPickleBall::getDonVi_QuanLy()
+{
+    return this->donvi_QuanLy;
+}
+
+SanPickleBall::SanPickleBall()
+{
+    this->soluongCotLuoi = "";
+    this->docaoCuaLuoi = "";
+    this->matSan = "";
+    this->mucChongTham = "";
+    this->coThamTruot = "";
+    this->soLuongVot = "";
+    this->soLuongBong = "";
+    this->coPhongKhoiDong = "";
+    this->loaivotPhuHop = "";
+    this->coPhongNghi = "";
+    this->soluong_NguoiToiDa = "";
+    this->lichsu_SuDung = "";
+    this->mucdo_HuHong = "";
+    this->donvi_QuanLy = "";
+}
+SanPickleBall::SanPickleBall(
+            string soluongCotLuoi, string docaoCuaLuoi, string matSan, string mucChongTham,
+            string coThamTruot, string soLuongVot, string soLuongBong,string coPhongKhoiDong,
+            string loaivotPhuHop, string coPhongNghi, string soluong_NguoiToiDa, string lichsu_SuDung,
+            string mucdo_HuHong,string donvi_QuanLy)
+{
+    this->soluongCotLuoi = soluongCotLuoi;
+    this->docaoCuaLuoi = docaoCuaLuoi;
+    this->matSan = matSan;
+    this->mucChongTham = mucChongTham;
+    this->coThamTruot = coThamTruot;
+    this->soLuongVot = soLuongVot;
+    this->soLuongBong = soLuongBong;
+    this->coPhongKhoiDong = coPhongKhoiDong;
+    this->loaivotPhuHop = loaivotPhuHop;
+    this->coPhongNghi = coPhongNghi;
+    this->coPhongNghi = coPhongNghi;
+    this->soluong_NguoiToiDa = soluong_NguoiToiDa;
+    this->lichsu_SuDung = lichsu_SuDung;
+    this->mucdo_HuHong = mucdo_HuHong;
+    this->donvi_QuanLy = donvi_QuanLy;
 }
     
 void SanPickleBall::input()
 {
-    cout<<"Nhap ma san "; getline(cin, maSan);
-    cout<<"Nhap ten san: "; getline(cin, tenSan);
-    cout<<"Nhap loai san(): ";getline(cin, loaiSan);
-    // San ngoai troi voi trong nha
-    cout<<"Nhap dia chi: ";getline(cin,diaChi);
-    // Dien tich tieu chuan voi lon
-    cout<<"Nhap dien tich: ";getline(cin,dienTich);
-    // co dang bao tri hay khong
-    cout<<"Nhap tinh trang: ";getline(cin,tinhTrang);
-    cout<<"Nhap  gia thue(theo gio): ";cin>>giathue_TheoGio;
-    cout<<"So nguoi toi da: ";getline(cin,soNguoiToiDa);
-    cout<<"Thoi gian mo cua: ";getline(cin,thoigian_MoCua);
-    cout<<"Thoi gian dong cua: ";getline(cin,thoigian_DongCua);
-    cout<<"Phong thay do(co/khong): ";getline(cin,coPhongThayDo);
-    cout<<"He thong den(co/khong): ";getline(cin,coHeThongDen);
-    cout<<"Bao hiem(co/khong): ";getline(cin,coBaoHiem);
-    cout<<"Nguoi quan ly: ";getline(cin,nguoiQuanLy);
-    cout<<"So dien thoai lien he: ";getline(cin,sodienthoai_LienHe);
+    cout << "\n--- THONG TIN SAN ---\n";
+    HeThongSanTheThao::input();
+    cout<<"Nhap so luong cot luoi: ";getline(cin,soluongCotLuoi);
+    cout<<"Nhap  do cao cua luoi: ";getline(cin,docaoCuaLuoi);
+    cout<<"Nhap muc chong tham: ";getline(cin,mucChongTham);
+    cout<<"Co tham truot: ";getline(cin,coThamTruot);
+    cout<<"Nhap so luong vot: ";getline(cin,soLuongVot);
+    cout<<"Nhap so luong bong: ";getline(cin,soLuongBong);
+    cout<<"Phong khoi dong(co/khong): ";getline(cin,coPhongKhoiDong);
+    cout<<"Loai vot phu hop: ";getline(cin,loaivotPhuHop);
+    cout<<"Phong nghi(co/khong): ";getline(cin,coPhongNghi);
+    cout<<"So luong nguoi toi da: ";getline(cin,soluong_NguoiToiDa);
+    cout<<"Lich su su dung: ";getline(cin,lichsu_SuDung);
+    cout<<"Muc do hu hong: ";getline(cin,mucdo_HuHong);
+    cout<<"Don vi quan ly: ";getline(cin,donvi_QuanLy);
+
 }
 
 void SanPickleBall::output()
 {
     cout<<"\n------THONG TIN SAN------\n";
-    cout<<"Ma san: "<< maSan << endl;
-    cout<<"Ten san: "<< tenSan << endl;
-    cout<<"Loai san: "<< loaiSan << endl;
-    cout<<"Dia chi: "<< diaChi <<endl;
-    cout<<"Dien tich: "<< dienTich << endl;
-    cout<<"Tinh trang san: "<< tinhTrang << endl;
-    cout<<"Gia thue: "<< giathue_TheoGio << endl;
-    cout<<"So nguoi: "<< soNguoiToiDa<< endl;
-    cout<<"Thoi gian mo cua: "<< thoigian_MoCua << endl;
-    cout<<"Thoi gian dong cua: "<< thoigian_DongCua << endl;
-    cout<<"Phong thay do: "<< coPhongThayDo << endl;
-    cout<<"He thong den: "<< coHeThongDen << endl;
-    cout<<"Bao hiem: "<< coBaoHiem << endl;
-    cout<<"Nguoi quan ly: "<< nguoiQuanLy << endl;
-    cout<<"So dien thoai lien he: "<< sodienthoai_LienHe << endl;
-    //cout<<"Gia thue: "<<<<endl;
+    HeThongSanTheThao::output();
+    cout<<"So luong cot luoi: "<< soluongCotLuoi << endl;
+    cout<<"Do cao cua luoi: "<< docaoCuaLuoi << endl;
+    cout<<"So nguoi: "<< mucChongTham<< endl;
+    cout<<"Nhap so luong vot: "<< soLuongVot << endl;
+    cout<<"Nhap so luong bong: "<< soLuongBong << endl;
+    cout<<"Phong khoi dong: "<< coPhongKhoiDong << endl;
+    cout<<"Loai vot phu hop: "<< loaivotPhuHop<< endl;
+    cout<<"Phong nghi: "<< coPhongNghi << endl;
+    cout<<"So luong nguoi toi da: "<< soluong_NguoiToiDa<< endl;
+    cout<<"Lich su su dung: "<< lichsu_SuDung << endl;
+    cout<<"Muc do hu hong: "<< mucdo_HuHong << endl;
+    cout<<"Don vi quan ly: "<< donvi_QuanLy << endl;   
+    
 }
-// từ 17h chiều đến 20h giá 100k tiền sân 1h
-// các khung giờ khác 80k
+
 
 

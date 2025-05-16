@@ -1,5 +1,5 @@
-#ifndef SanBongBayNguoi_H
-#define SanBongBayNguoi_H
+#ifndef SANBONGBAYNGUOI_H
+#define SANBONGBAYNGUOI_H
 
 #include "HeThongSanTheThao.h"
 #include <iostream>
@@ -29,9 +29,53 @@ class SanBongBayNguoi:public HeThongSanTheThao
                     string CoHangRao, string SoLuongPhatGoc, string CoHeThongTuoiNuoc, string CameraGiamSat,
                     string CoPhongNghi, string LichThiDau, string CoWifi, string SoLuongTrongTai, string CoHeThongAmThanh, string MucDoBaoTri);
     
-    virtual void input();
-    virtual void output();
-    virtual bool kiemTraTinhTrang();
+    void setLOAICO(string LoaiCo);
+    string getLOAICO();
+
+    void setCHIEUDAISAN(string ChieuDaiSan);
+    string getCHIEUDAISAN();
+
+    void setCHIEURONGSAN(string ChieuRongSan);
+    string getCHIEURONGSAN();
+
+    void setLOAIBONG(string LoaiBong);
+    string getLOAIBONG();
+
+    void setCOLUOI(string CoLuoi);
+    string getCOLUOI();
+
+    void setCOHANGRAO(string CoHangRao);
+    string getCOHANGRAO();
+
+    void setSOLUONGPHATGOC(string SoLuongPhatGoc);
+    string getSOLUONGPHATGOC();
+
+    void setCOHETHONGTUOINUOC(string CoHeThongTuoiNuoc);
+    string getCOHETHONGTUOINUOC();
+
+    void setCAMERAGIAMSAT(string CameraGiamSat);
+    string getCAMERAGIAMSAT();
+
+    void setCOPHONGNGHI(string CoPhongNghi);
+    string getCOPHONGNGHI();
+
+    void setLICHTHIDAU(string LichThiDau);
+    string getLICHTHIDAU();
+
+    void setCOWIFI(string CoWifi);
+    string getCOWIFI();
+
+    void setSOLUONGTRONGTAI(string SoLuongTrongTai);
+    string getSOLUONGTRONGTAI();
+
+    void setCOHETHONGAMTHANH(string CoHeThongAmThanh);
+    string getCOHETHONGAMTHANH();
+
+    void setMUCDOBAOTRI(string MucDoBaoTri);
+    string getMUCDOBAOTRI();
+
+    virtual void input() override;
+    virtual void output() override;
 };
 
 #endif

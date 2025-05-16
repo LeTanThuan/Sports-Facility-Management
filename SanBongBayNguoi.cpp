@@ -1,6 +1,6 @@
 #include "SanBongBayNguoi.h"
 #include <iostream>
-
+using namespace std;
 SanBongBayNguoi::SanBongBayNguoi()
 {
     this->LoaiCo = "chua xac dinh";
@@ -21,13 +21,13 @@ SanBongBayNguoi::SanBongBayNguoi()
 }
 
 SanBongBayNguoi::SanBongBayNguoi(
-                    string loaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong,
+                    string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong,
                     string CoLuoi, string coHangRao, string soLuongPhatGoc,
                     string CoHeThongTuoiNuoc, string cameraGiamSat, string CoPhongNghi,
                     string LichThiDau, string CoWifi, string SoLuongTrongTai,
                     string CoHeThongAmThanh, string MucDoBaoTri) 
 {
-    this->LoaiCo = loaiCo;
+    this->LoaiCo = LoaiCo;
     this->ChieuDaiSan = ChieuDaiSan;
     this->ChieuRongSan = ChieuRongSan;
     this->LoaiBong = LoaiBong;
@@ -43,9 +43,147 @@ SanBongBayNguoi::SanBongBayNguoi(
     this->CoHeThongAmThanh = CoHeThongAmThanh;
     this->MucDoBaoTri = MucDoBaoTri;
 }
+//getter setter
+    void SanBongBayNguoi:: setLOAICO(string LoaiCo)
+    {
+        this->LoaiCo = LoaiCo;
+    }
+    string SanBongBayNguoi:: getLOAICO()
+    {
+        return LoaiCo;
+    }
+
+    void SanBongBayNguoi::setCHIEUDAISAN(string ChieuDaiSan)
+    {
+        this->ChieuDaiSan = ChieuDaiSan;
+    }
+    string SanBongBayNguoi ::getCHIEUDAISAN()
+    {
+        return ChieuDaiSan;
+    }
+
+    void SanBongBayNguoi::setCHIEURONGSAN(string ChieuRongSan)
+    {
+        this->ChieuRongSan = ChieuRongSan;
+    }
+    string SanBongBayNguoi::getCHIEURONGSAN()
+    {
+        return ChieuRongSan;
+    }
+
+    void SanBongBayNguoi :: setLOAIBONG(string LoaiBong)
+    {
+        this->LoaiBong = LoaiBong;
+    }
+    string SanBongBayNguoi :: getLOAIBONG()
+    {
+        return LoaiBong;
+    }
+
+    void SanBongBayNguoi::setCOLUOI(string CoLuoi)
+    {
+        this->CoLuoi = CoLuoi;
+    }
+    string SanBongBayNguoi::getCOLUOI()
+    {
+        return CoLuoi;
+    }
+
+    void SanBongBayNguoi :: setCOHANGRAO(string CoHangRao)
+    {
+        this->CoHangRao = CoHangRao;
+    }
+    string SanBongBayNguoi :: getCOHANGRAO()
+    {
+        return CoHangRao;
+    }
+
+    void SanBongBayNguoi :: setSOLUONGPHATGOC(string SoLuongPhatGoc)
+    {
+        this->SoLuongPhatGoc = SoLuongPhatGoc;
+    }
+    string SanBongBayNguoi :: getSOLUONGPHATGOC()
+    {
+        return SoLuongPhatGoc;
+    }
+
+    void SanBongBayNguoi :: setCOHETHONGTUOINUOC(string CoHeThongTuoiNuoc)
+    {
+        this->CoHeThongTuoiNuoc = CoHeThongTuoiNuoc;
+    }
+    string SanBongBayNguoi :: getCOHETHONGTUOINUOC()
+    {
+        return CoHeThongTuoiNuoc;
+    }
+
+    void SanBongBayNguoi :: setCAMERAGIAMSAT(string CameraGiamSat)
+    {
+        this->CameraGiamSat = CameraGiamSat;
+    }
+    string SanBongBayNguoi :: getCAMERAGIAMSAT()
+    {
+        return CameraGiamSat;
+    }
+
+    void SanBongBayNguoi :: setCOPHONGNGHI(string CoPhongNghi)
+    {
+        this->CoPhongNghi = CoPhongNghi;
+    }
+    string SanBongBayNguoi :: getCOPHONGNGHI()
+    {
+        return CoPhongNghi;
+    }
+
+    void SanBongBayNguoi :: setLICHTHIDAU(string LichThiDau)
+    {
+        this->LichThiDau = LichThiDau;
+    }
+    string SanBongBayNguoi :: getLICHTHIDAU()
+    {
+        return LichThiDau;
+    }
+
+    void SanBongBayNguoi::setCOWIFI(string CoWifi)
+    {
+        this->CoWifi = CoWifi;
+    }
+    string SanBongBayNguoi::getCOWIFI()
+    {
+        return CoWifi;
+    }
+
+    void SanBongBayNguoi::setSOLUONGTRONGTAI(string SoLuongTrongTai)
+    {
+        this->SoLuongTrongTai = SoLuongTrongTai;
+    }
+    string SanBongBayNguoi::getSOLUONGTRONGTAI()
+    {
+        return SoLuongTrongTai;
+    }
+
+    void SanBongBayNguoi::setCOHETHONGAMTHANH(string CoHeThongAmThanh)
+    {
+        this->CoHeThongAmThanh = CoHeThongAmThanh;
+    }
+    string SanBongBayNguoi::getCOHETHONGAMTHANH()
+    {
+        return CoHeThongAmThanh;
+    }
+
+    void SanBongBayNguoi::setMUCDOBAOTRI(string MucDoBaoTri)
+    {
+        this->MucDoBaoTri = MucDoBaoTri;
+    }
+    string SanBongBayNguoi::getMUCDOBAOTRI()
+    {
+        return MucDoBaoTri;
+    }
+
 
 void SanBongBayNguoi::input() 
 {
+    cout << "\n--- THONG TIN SAN ---\n";
+    HeThongSanTheThao::input();
     cin.ignore();
     cout << "Nhap loai co: "; 
     getline(cin, LoaiCo);
@@ -82,6 +220,7 @@ void SanBongBayNguoi::input()
 void SanBongBayNguoi::output() 
 {
     cout << "\n--- THONG TIN SAN ---\n";
+    HeThongSanTheThao::output();
     cout << "Loai co: " << LoaiCo << endl;
     cout << "Chieu dai san: " << ChieuDaiSan << endl;
     cout << "Chieu rong san: " << ChieuRongSan << endl;
@@ -96,42 +235,5 @@ void SanBongBayNguoi::output()
     cout << "Wifi: " << CoWifi << endl;
     cout << "So trong tai: " << SoLuongTrongTai << endl;
     cout << "He thong am thanh: " << CoHeThongAmThanh << endl;
-    cout << "Muc do bao tri: " << MucDoBaoTri << endl;
-    //cout << "Gia thue: " << tinhGiaThue() << " VND" << endl;
+    cout << "Muc do bao tri: " << MucDoBaoTri << endl;   
 }
-
-//float tinhGiaThue()  
-//{
-//float gia = 500000;
-//if (CoWifi == "co") gia += 30000;
-///if (CoHeThongAmThanh == "co") gia += 50000;
-//if (CameraGiamSat == "co") gia += 40000;
-//if (LoaiCo == "co nhua") {
-//   gia += 20000;
-//} else if (LoaiCo == "co thiet") {
-//    gia += 30000;
-//}
-//    return gia;
-//}
-
-bool SanBongBayNguoi::kiemTraTinhTrang() 
-{
-    return MucDoBaoTri == "tot";
-}
-/*
-void xuatLichThiDau() const {
-    cout << "Lich thi dau: " << LichThiDau << endl;
-}
-
-void baoTriSan() {
-    cout << "Dang bao tri san..." << endl;
-    MucDoBaoTri = "tot";
-}
-
-void hienThiLichSan() const {
-    cout << "Lich thi dau cua san: " << LichThiDau << endl;
-}
-
-void kiemTraHeThongDien() const {
-    cout << "He thong dien hoat dong binh thuong." << endl;
-}*/
