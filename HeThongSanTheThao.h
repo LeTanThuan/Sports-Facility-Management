@@ -1,5 +1,5 @@
-#ifndef HTSanTheThao_H
-#define HTSanTheThao_H
+#ifndef HeThongSanTheThao_H
+#define HeThongSanTheThao_H
 
 #include <string>
 #include "QLyHeThongSanTheThao.h"

@@ -80,13 +80,9 @@ void SanPickleBall::output()
     cout<<"Bao hiem: "<< coBaoHiem << endl;
     cout<<"Nguoi quan ly: "<< nguoiQuanLy << endl;
     cout<<"So dien thoai lien he: "<< sodienthoai_LienHe << endl;
-    cout<<"Gia thue: "<<tinhGia()<<endl;
+    //cout<<"Gia thue: "<<<<endl;
 }
 // từ 17h chiều đến 20h giá 100k tiền sân 1h
 // các khung giờ khác 80k
-float tinhGia()
-{
-    
-    return 0;
-}
+
 
