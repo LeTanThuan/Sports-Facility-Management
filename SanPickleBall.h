@@ -34,7 +34,7 @@ SanPickleBall(
             string loaivotPhuHop, string coPhongNghi, string soluong_NguoiToiDa, string lichsu_SuDung,
             string mucdo_HuHong,string donvi_QuanLy);
 
-
+//getter va setter
 void setSoLuongCotLuoi(string soluongCotLuoi);
 string getSoLuongCotLuoi();
 void setDoCaoCuaLuoi(string docaoCuaLuoi);

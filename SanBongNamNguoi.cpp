@@ -44,145 +44,131 @@ SanBongNamNguoi::SanBongNamNguoi(
     this->MucDoBaoTri = MucDoBaoTri;
 }
 //getter setter
-    void SanBongNamNguoi:: setLOAICO(string LoaiCo)
-    {
-        this->LoaiCo = LoaiCo;
-    }
-    string SanBongNamNguoi:: getLOAICO()
-    {
-        return LoaiCo;
-    }
-
-    void SanBongNamNguoi::setCHIEUDAISAN(string ChieuDaiSan)
-    {
-        this->ChieuDaiSan = ChieuDaiSan;
-    }
-    string SanBongNamNguoi ::getCHIEUDAISAN()
-    {
-        return ChieuDaiSan;
-    }
-
-    void SanBongNamNguoi::setCHIEURONGSAN(string ChieuRongSan)
-    {
-        this->ChieuRongSan = ChieuRongSan;
-    }
-    string SanBongNamNguoi::getCHIEURONGSAN()
-    {
-        return ChieuRongSan;
-    }
-
-    void SanBongNamNguoi :: setLOAIBONG(string LoaiBong)
-    {
-        this->LoaiBong = LoaiBong;
-    }
-    string SanBongNamNguoi :: getLOAIBONG()
-    {
-        return LoaiBong;
-    }
-
-    void SanBongNamNguoi::setCOLUOI(string CoLuoi)
-    {
-        this->CoLuoi = CoLuoi;
-    }
-    string SanBongNamNguoi::getCOLUOI()
-    {
-        return CoLuoi;
-    }
-
-    void SanBongNamNguoi :: setCOHANGRAO(string CoHangRao)
-    {
-        this->CoHangRao = CoHangRao;
-    }
-    string SanBongNamNguoi :: getCOHANGRAO()
-    {
-        return CoHangRao;
-    }
-
-    void SanBongNamNguoi :: setSOLUONGPHATGOC(string SoLuongPhatGoc)
-    {
-        this->SoLuongPhatGoc = SoLuongPhatGoc;
-    }
-    string SanBongNamNguoi :: getSOLUONGPHATGOC()
-    {
-        return SoLuongPhatGoc;
-    }
-
-    void SanBongNamNguoi :: setCOHETHONGTUOINUOC(string CoHeThongTuoiNuoc)
-    {
-        this->CoHeThongTuoiNuoc = CoHeThongTuoiNuoc;
-    }
-    string SanBongNamNguoi :: getCOHETHONGTUOINUOC()
-    {
-        return CoHeThongTuoiNuoc;
-    }
-
-    void SanBongNamNguoi :: setCAMERAGIAMSAT(string CameraGiamSat)
-    {
-        this->CameraGiamSat = CameraGiamSat;
-    }
-    string SanBongNamNguoi :: getCAMERAGIAMSAT()
-    {
-        return CameraGiamSat;
-    }
-
-    void SanBongNamNguoi :: setCOPHONGNGHI(string CoPhongNghi)
-    {
-        this->CoPhongNghi = CoPhongNghi;
-    }
-    string SanBongNamNguoi :: getCOPHONGNGHI()
-    {
-        return CoPhongNghi;
-    }
-
-    void SanBongNamNguoi :: setLICHTHIDAU(string LichThiDau)
-    {
-        this->LichThiDau = LichThiDau;
-    }
-    string SanBongNamNguoi :: getLICHTHIDAU()
-    {
-        return LichThiDau;
-    }
-
-    void SanBongNamNguoi::setCOWIFI(string CoWifi)
-    {
-        this->CoWifi = CoWifi;
-    }
-    string SanBongNamNguoi::getCOWIFI()
-    {
-        return CoWifi;
-    }
-
-    void SanBongNamNguoi::setSOLUONGTRONGTAI(string SoLuongTrongTai)
-    {
-        this->SoLuongTrongTai = SoLuongTrongTai;
-    }
-    string SanBongNamNguoi::getSOLUONGTRONGTAI()
-    {
-        return SoLuongTrongTai;
-    }
-
-    void SanBongNamNguoi::setCOHETHONGAMTHANH(string CoHeThongAmThanh)
-    {
-        this->CoHeThongAmThanh = CoHeThongAmThanh;
-    }
-    string SanBongNamNguoi::getCOHETHONGAMTHANH()
-    {
-        return CoHeThongAmThanh;
-    }
-
-    void SanBongNamNguoi::setMUCDOBAOTRI(string MucDoBaoTri)
-    {
-        this->MucDoBaoTri = MucDoBaoTri;
-    }
-    string SanBongNamNguoi::getMUCDOBAOTRI()
-    {
-        return MucDoBaoTri;
-    }
+void SanBongNamNguoi:: setLOAICO(string LoaiCo)
+{
+    this->LoaiCo = LoaiCo;
+}
+string SanBongNamNguoi:: getLOAICO()
+{
+    return LoaiCo;
+}
+void SanBongNamNguoi::setCHIEUDAISAN(string ChieuDaiSan)
+{
+    this->ChieuDaiSan = ChieuDaiSan;
+}
+string SanBongNamNguoi ::getCHIEUDAISAN()
+{
+    return ChieuDaiSan;
+}
+void SanBongNamNguoi::setCHIEURONGSAN(string ChieuRongSan)
+{
+    this->ChieuRongSan = ChieuRongSan;
+}
+string SanBongNamNguoi::getCHIEURONGSAN()
+{
+    return ChieuRongSan;
+}
+void SanBongNamNguoi :: setLOAIBONG(string LoaiBong)
+{
+    this->LoaiBong = LoaiBong;
+}
+string SanBongNamNguoi :: getLOAIBONG()
+{
+    return LoaiBong;
+}
+void SanBongNamNguoi::setCOLUOI(string CoLuoi)
+{
+    this->CoLuoi = CoLuoi;
+}
+string SanBongNamNguoi::getCOLUOI()
+{
+    return CoLuoi;
+}
+void SanBongNamNguoi :: setCOHANGRAO(string CoHangRao)
+{
+    this->CoHangRao = CoHangRao;
+}
+string SanBongNamNguoi :: getCOHANGRAO()
+{
+    return CoHangRao;
+}
+void SanBongNamNguoi :: setSOLUONGPHATGOC(string SoLuongPhatGoc)
+{
+    this->SoLuongPhatGoc = SoLuongPhatGoc;
+}
+string SanBongNamNguoi :: getSOLUONGPHATGOC()
+{
+    return SoLuongPhatGoc;
+}
+void SanBongNamNguoi :: setCOHETHONGTUOINUOC(string CoHeThongTuoiNuoc)
+{
+    this->CoHeThongTuoiNuoc = CoHeThongTuoiNuoc;
+}
+string SanBongNamNguoi :: getCOHETHONGTUOINUOC()
+{
+    return CoHeThongTuoiNuoc;
+}
+void SanBongNamNguoi :: setCAMERAGIAMSAT(string CameraGiamSat)
+{
+    this->CameraGiamSat = CameraGiamSat;
+}
+string SanBongNamNguoi :: getCAMERAGIAMSAT()
+{
+    return CameraGiamSat;
+}
+void SanBongNamNguoi :: setCOPHONGNGHI(string CoPhongNghi)
+{
+    this->CoPhongNghi = CoPhongNghi;
+}
+string SanBongNamNguoi :: getCOPHONGNGHI()
+{
+    return CoPhongNghi;
+}
+void SanBongNamNguoi :: setLICHTHIDAU(string LichThiDau)
+{
+    this->LichThiDau = LichThiDau;
+}
+string SanBongNamNguoi :: getLICHTHIDAU()
+{
+    return LichThiDau;
+}
+void SanBongNamNguoi::setCOWIFI(string CoWifi)
+{
+    this->CoWifi = CoWifi;
+}
+string SanBongNamNguoi::getCOWIFI()
+{
+    return CoWifi;
+}
+void SanBongNamNguoi::setSOLUONGTRONGTAI(string SoLuongTrongTai)
+{
+    this->SoLuongTrongTai = SoLuongTrongTai;
+}
+string SanBongNamNguoi::getSOLUONGTRONGTAI()
+{
+    return SoLuongTrongTai;
+}
+void SanBongNamNguoi::setCOHETHONGAMTHANH(string CoHeThongAmThanh)
+{
+    this->CoHeThongAmThanh = CoHeThongAmThanh;
+}
+string SanBongNamNguoi::getCOHETHONGAMTHANH()
+{
+    return CoHeThongAmThanh;
+}
+void SanBongNamNguoi::setMUCDOBAOTRI(string MucDoBaoTri)
+{
+    this->MucDoBaoTri = MucDoBaoTri;
+}
+string SanBongNamNguoi::getMUCDOBAOTRI()
+{
+    return MucDoBaoTri;
+}
 
 
 void SanBongNamNguoi::input() 
 {
-    cout << "\n--- THONG TIN SAN ---\n";
+    cout << "\n--- THONG TIN SAN BONG NAM NGUOI ---\n";
     HeThongSanTheThao::input();
     cin.ignore();
     cout << "Nhap loai co: "; 
@@ -219,7 +205,7 @@ void SanBongNamNguoi::input()
 
 void SanBongNamNguoi::output() 
 {
-    cout << "\n--- THONG TIN SAN ---\n";
+    cout << "\n--- THONG TIN SAN BONG NAM NGUOI---\n";
     HeThongSanTheThao::output();
     cout << "Loai co: " << LoaiCo << endl;
     cout << "Chieu dai san: " << ChieuDaiSan << endl;

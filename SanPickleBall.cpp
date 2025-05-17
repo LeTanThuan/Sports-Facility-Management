@@ -26,8 +26,6 @@ string SanPickleBall::getMatSan()
 {
     return this->matSan;
 }
-
-
 void SanPickleBall:: setMucChongTham(string mucChongTham)
 {
     this->mucChongTham=mucChongTham;
@@ -159,7 +157,7 @@ SanPickleBall::SanPickleBall(
     
 void SanPickleBall::input()
 {
-    cout << "\n--- THONG TIN SAN ---\n";
+    cout << "\n--- THONG TIN SAN PICKLEBALL---\n";
     HeThongSanTheThao::input();
     cout<<"Nhap so luong cot luoi: ";getline(cin,soluongCotLuoi);
     cout<<"Nhap  do cao cua luoi: ";getline(cin,docaoCuaLuoi);
@@ -179,7 +177,7 @@ void SanPickleBall::input()
 
 void SanPickleBall::output()
 {
-    cout<<"\n------THONG TIN SAN------\n";
+    cout<<"\n------THONG TIN SAN PICKLEBALL------\n";
     HeThongSanTheThao::output();
     cout<<"So luong cot luoi: "<< soluongCotLuoi << endl;
     cout<<"Do cao cua luoi: "<< docaoCuaLuoi << endl;

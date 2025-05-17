@@ -47,7 +47,6 @@ HeThongSanTheThao::HeThongSanTheThao(string maSan, string tenSan, string loaiSan
     this->GiaThue = GiaThue;
 }
 
-
 //getter and setter
 void HeThongSanTheThao::setSoGioChoi(float SoGioChoi)
 {
@@ -177,7 +176,6 @@ string HeThongSanTheThao::getSoDienThoai_LienHe()
 {
     return sodienthoai_LienHe;
 }
-
 void HeThongSanTheThao::setGiaThue(float GiaThue)
 {
     GiaThue=GiaThue;
@@ -188,26 +186,24 @@ float HeThongSanTheThao::getGiaThue()
 }
 
 
-
 void HeThongSanTheThao::input() 
 {  
-    cout<<"Nhap so Gio: ";cin>>SoGioChoi;
     cin.ignore();
     cout<<"Nhap ma san: ";getline(cin,maSan);
     cout<<"Nhap ten san: ";getline(cin,tenSan);
     cout<<"Nhap loai san: ";getline(cin,loaiSan);
     cout<<"Nhap dia chi: ";getline(cin,diaChi);
-    cout<<"Nhap dien tich: ";getline(cin,dienTich);
+    //cout<<"Nhap dien tich: ";getline(cin,dienTich);
     cout<<"Nhap tinh trang san: ";getline(cin,tinhTrang);
     cout<<"Nhap gia thue(theo gio): ";cin>>giathue_TheoGio;
     cout<<"Nhap so nguoi toi da: ";getline(cin,soNguoiToiDa);
-    cout<<"Thoi gian mo cua: ";getline(cin,thoigian_MoCua);
-    cout<<"Thoi gian dong cua:";getline(cin,thoigian_DongCua);
+    //cout<<"Thoi gian mo cua: ";getline(cin,thoigian_MoCua);
+    //cout<<"Thoi gian dong cua:";getline(cin,thoigian_DongCua);
     cout<<"Phong thay do(co/khong): ";getline(cin,coPhongThayDo);
     cout<<"He thong den(co/khong): ";getline(cin,coHeThongDen);
     cout<<"Bao hiem(co/khong): ";getline(cin,coBaoHiem);
-    cout<<"Nguoi quan ly: ";getline(cin,nguoiQuanLy);
-    cout<<"So dien thoai lien he: ";getline(cin,sodienthoai_LienHe);
+    //cout<<"Nguoi quan ly: ";getline(cin,nguoiQuanLy);
+    //cout<<"So dien thoai lien he: ";getline(cin,sodienthoai_LienHe);
     cout<<"Gia thue: ";cin>>GiaThue;
     cin.ignore();
     cout<<"Nhap so gio choi: ";cin>>SoGioChoi;
@@ -215,7 +211,7 @@ void HeThongSanTheThao::input()
 }
 void HeThongSanTheThao::output()
 {
-    cout<<"so Gio: "<<SoGioChoi<<endl;
+    cout<<"So Gio: "<<SoGioChoi<<endl;
     cout<<"Ma san: "<<maSan<<endl;
     cout<<"Ten san: "<<tenSan<<endl;
     cout<<"Loai san: "<<loaiSan<<endl;

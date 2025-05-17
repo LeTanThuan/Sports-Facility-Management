@@ -18,7 +18,7 @@ void QLyHeThongSanTheThao::input()
     choose = 0;
     while(1)
     {
-        cout<<"Ban Muon Dat San Gi\n1. San Bong Bay Nguoi.\n2. San Bong Nam N.\n3. San Cau Long.\n4. San PickleBall.\n5. Thoat Khong Nhap nu!";
+        cout<<"Ban Muon Dat San Gi\n1. San Bong Bay Nguoi.\n2. San Bong Nam Nguoi.\n3. San Cau Long.\n4. San PickleBall.\n5. Thoat Khong Nhap Nua!";
         cin>> choose;
         if (choose == 5)
             break;
@@ -135,7 +135,7 @@ void QLyHeThongSanTheThao::sapxep_TheoTien()
         list[minIndex] = temp;
     }
 
-    cout << "\n📢 Danh sach san da duoc sap xep theo gia thue!\n";
+    cout << "\nDanh sach san da duoc sap xep theo gia thue!\n";
 }
 float QLyHeThongSanTheThao::tinhTongTienThuDuoc() 
 {
@@ -152,6 +152,7 @@ float QLyHeThongSanTheThao::tinhTongTienThuDuoc()
 void QLyHeThongSanTheThao::xoasan_TheoMa() 
 {
     string idToDelete;
+    cin.ignore();
     cout << "Nhap ID san muon xoa: ";
     getline(cin,idToDelete);
     bool found = false;
@@ -160,7 +161,7 @@ void QLyHeThongSanTheThao::xoasan_TheoMa()
         if (list[i]->getMaSan() == idToDelete) 
         {
             found = true;
-            delete list[i]; // Giải phóng bộ nhớ
+            delete list[i]; 
             // Dịch chuyển danh sách
             for (int j = i; j < n - 1; j++) 
             {
@@ -168,7 +169,7 @@ void QLyHeThongSanTheThao::xoasan_TheoMa()
             }
             list[n - 1] = nullptr; // Xóa phần tử cuối cùng sau khi dịch chuyển
             n--; // Giảm số lượng sân
-            cout << "\n📢 San co ID " << idToDelete << " đa duoc xoa thanh cong!\n";
+            cout << "\nSan co ID " << idToDelete << " đa duoc xoa thanh cong!\n";
             break;
         }
     }
@@ -185,7 +186,7 @@ void QLyHeThongSanTheThao::luu_DanhSachRaFile()
 
     if (!outFile) 
     {
-        cout << " Loi: Khong the mo file DanhSachSan.txt để ghi du lieu!" << endl;
+        cout << "Loi: Khong the mo file DanhSachSan.txt để ghi du lieu!" << endl;
         return;
     }
 
@@ -235,7 +236,7 @@ void QLyHeThongSanTheThao::demSoSanTheoLoai(string loai)
             count++;
         }
     }
-    cout<<"📢Loai San "<<loai<<" Co "<<count<<" San.\n";
+    cout<<"Loai San "<<loai<<" Co "<<count<<" San.\n";
 }
 
 // Hiển thị danh sách sân theo loại (Bóng đá, cầu lông...)
@@ -300,7 +301,7 @@ void QLyHeThongSanTheThao::thongke_TheoKhoangGia()
     cout<<"Nhap Gia Min va Max: ";
     cin>>min;
     cin>>max;
-    cout << "\n📢 Danh Sach Co Gia Thue Tu " << min << "K Den " << max << "K:\n";
+    cout << "\nDanh Sach Co Gia Thue Tu " << min << "K Den " << max << "K:\n";
     for (int i = 0; i < n; i++) {
         if (list[i]->getGiaThue() >= min && list[i]->getGiaThue() <= max) 
         {

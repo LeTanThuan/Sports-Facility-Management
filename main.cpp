@@ -14,7 +14,7 @@ int main()
     QuanLy.hienthi_TatCaSan();
     QuanLy.sapxep_TheoGio();
     QuanLy.sapxep_TheoTien();
-    cout << "📢 Tong tien thu duoc " << QuanLy.tinhTongTienThuDuoc() << "K\n";
+    cout << "Tong tien thu duoc " << QuanLy.tinhTongTienThuDuoc() << "K\n";
     QuanLy.xoasan_TheoMa();
     QuanLy.luu_DanhSachRaFile();
     QuanLy.capNhatGiaThue();

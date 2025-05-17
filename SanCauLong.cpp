@@ -158,7 +158,7 @@ SanCauLong::SanCauLong(
 
 void SanCauLong::input()
 {
-    cout << "\n--- THONG TIN SAN ---\n";
+    cout << "\n--- THONG TIN SAN CAU LONG---\n";
     HeThongSanTheThao::input();
     cout<<"Nhap so luong cot luoi: ";getline(cin,soluongCotLuoi);
     cout<<"Nhap  do cao cua luoi: ";getline(cin,docaoCuaLuoi);
@@ -177,7 +177,7 @@ void SanCauLong::input()
 
 void SanCauLong::output()
 {
-    cout<<"\n------THONG TIN SAN------\n";
+    cout<<"\n------THONG TIN SAN CAU LONG------\n";
     HeThongSanTheThao::output();
     cout<<"So luong cot luoi: "<< soluongCotLuoi << endl;
     cout<<"Do cao cua luoi: "<< docaoCuaLuoi << endl;
