@@ -115,7 +115,7 @@ void QLyHeThongSanTheThao::sapxep_TheoGio() {
         list[minIndex] = temp;
     }
 
-    cout << "\n📢 Danh sach san da duoc xap xep theo gio hoat dong!\n";
+    cout << "\nDanh sach san da duoc xap xep theo gio hoat dong!\n";
 }
 
 void QLyHeThongSanTheThao::sapxep_TheoTien()
@@ -218,7 +218,7 @@ void QLyHeThongSanTheThao::capNhatGiaThue()
         if (list[i]->getMaSan() == id) 
         {
             list[i]->setGiaThue(newPrice);
-            cout << " Gia thue san ID " << id << " đa đuoc cap nhat thanh " << newPrice << "K/h\n";
+            cout << " Gia thue san ID " << id << " da duoc cap nhat thanh " << newPrice << "K/h\n";
             return;
         }
     }

@@ -196,6 +196,7 @@ void HeThongSanTheThao::input()
     //cout<<"Nhap dien tich: ";getline(cin,dienTich);
     cout<<"Nhap tinh trang san: ";getline(cin,tinhTrang);
     cout<<"Nhap gia thue(theo gio): ";cin>>giathue_TheoGio;
+    cin.ignore();
     cout<<"Nhap so nguoi toi da: ";getline(cin,soNguoiToiDa);
     //cout<<"Thoi gian mo cua: ";getline(cin,thoigian_MoCua);
     //cout<<"Thoi gian dong cua:";getline(cin,thoigian_DongCua);
