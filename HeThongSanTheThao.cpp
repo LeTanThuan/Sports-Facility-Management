@@ -8,51 +8,6 @@ int HeThongSanTheThao::counter_SBNN = 1;
 int HeThongSanTheThao::counter_SCL = 1;
 int HeThongSanTheThao::counter_SPB = 1;
 
-
-HeThongSanTheThao::HeThongSanTheThao() 
-{
-    this->maSan = "A";
-    this->tenSan = "";
-    this->loaiSan = "";
-    this->diaChi = "";
-    this->dienTich = "";
-    this->tinhTrang = "";
-    this->giathue_TheoGio = 0;
-    this->soNguoiToiDa = "";
-    this->thoigian_MoCua = "5:00";
-    this->thoigian_DongCua = "23:00";
-    this->coPhongThayDo = "Khong";
-    this->coHeThongDen = "Khong";
-    this->coBaoHiem = "Khong";
-    this->nguoiQuanLy = "Le Van A";
-    this->sodienthoai_LienHe = "xxxxxxxxxx";
-    this->SoGioChoi = 0;
-    this->GiaThue = 0;
-}
-
-HeThongSanTheThao::HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, string dienTich, string tinhTrang,
-                                    float giathue_TheoGio, string soNguoiToiDa, string thoigian_MoCua, string thoigian_DongCua,
-                                    string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi, float GiaThue)
-{
-    this->maSan = maSan;
-    this->tenSan = tenSan;
-    this->loaiSan = loaiSan;
-    this->diaChi = diaChi;
-    this->dienTich = dienTich;
-    this->tinhTrang = tinhTrang;
-    this->giathue_TheoGio = giathue_TheoGio;
-    this->soNguoiToiDa = soNguoiToiDa;
-    this->thoigian_MoCua = thoigian_MoCua;
-    this->thoigian_DongCua = thoigian_DongCua;
-    this->coPhongThayDo = coPhongThayDo;
-    this->coHeThongDen = coHeThongDen;
-    this->coBaoHiem = coBaoHiem;
-    this->nguoiQuanLy = nguoiQuanLy;
-    this->sodienthoai_LienHe = sodienthoai_LienHe;
-    this->SoGioChoi = SoGioChoi;
-    this->GiaThue = GiaThue;
-}
-
 //getter and setter
 void HeThongSanTheThao::setSoGioChoi(float SoGioChoi)
 {
@@ -135,11 +90,11 @@ float HeThongSanTheThao::getGiaThue_TheoGio()
 {
     return giathue_TheoGio;
 }
-void HeThongSanTheThao::setSoNguoiToiDa(string soNguoiToiDa)
+void HeThongSanTheThao::setSoNguoiToiDa(int soNguoiToiDa)
 {
     soNguoiToiDa=soNguoiToiDa;
 }
-string HeThongSanTheThao::getSoNguoiToiDa()
+int HeThongSanTheThao::getSoNguoiToiDa()
 {
     return soNguoiToiDa;
 }
@@ -208,43 +163,89 @@ float HeThongSanTheThao::getGiaThue()
     return GiaThue;
 }
 
+//contructor khong tham so
+HeThongSanTheThao::HeThongSanTheThao() 
+{
+    this->maSan = "Khong Xac Dinh";
+    this->tenSan = "Khong Xac Dinh";
+    this->loaiSan = "Khong Xac Dinh";
+    this->diaChi = "Khong Xac Dinh";
+    this->dienTich = "Khong Xac Dinh";
+    this->tinhTrang = "Khong Xac Dinh";
+    this->giathue_TheoGio = 0;
+    this->soNguoiToiDa = -1;
+    this->thoigian_MoCua = "Khong Xac Dinh";
+    this->thoigian_DongCua = "Khong Xac Dinh";
+    this->coPhongThayDo = "Khong";
+    this->coHeThongDen = "Khong";
+    this->coBaoHiem = "Khong";
+    this->nguoiQuanLy = "Khong Xac Dinh";
+    this->sodienthoai_LienHe = "xxxxxxxxxx";
+    this->SoGioChoi = 0;
+    this->GiaThue = 0;
+}
+
+//contructor co tham so
+HeThongSanTheThao::HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, string dienTich, string tinhTrang,
+                                    float giathue_TheoGio, string thoigian_MoCua, string thoigian_DongCua,
+                                    string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi, float GiaThue)
+{
+    this->maSan = maSan;
+    this->tenSan = tenSan;
+    this->loaiSan = loaiSan;
+    this->diaChi = diaChi;
+    this->dienTich = dienTich;
+    this->tinhTrang = tinhTrang;
+    this->giathue_TheoGio = giathue_TheoGio;
+    this->thoigian_MoCua = thoigian_MoCua;
+    this->thoigian_DongCua = thoigian_DongCua;
+    this->coPhongThayDo = coPhongThayDo;
+    this->coHeThongDen = coHeThongDen;
+    this->coBaoHiem = coBaoHiem;
+    this->nguoiQuanLy = nguoiQuanLy;
+    this->sodienthoai_LienHe = sodienthoai_LienHe;
+    this->SoGioChoi = SoGioChoi;
+    this->GiaThue = GiaThue;
+}
+//ham input
 void HeThongSanTheThao::input() 
 {  
     cin.ignore();
-    cout<<"Nhap ten san: ";getline(cin,tenSan);
-    cout<<"Nhap loai san (Trong Nha / Ngoai Troi): ";getline(cin,loaiSan);
-    if (loaiSan != "Trong Nha" && loaiSan != "Ngoai Troi") 
-    {
-        loaiSan = "Khong Xac Dinh";
-    }
-    cout<<"Nhap dia chi: ";getline(cin,diaChi);
+    cout<<"Nhap ten san: ";
+    getline(cin,tenSan);
+    cout<<"Nhap dia chi: ";
+    getline(cin,diaChi);
     //cout<<"Nhap dien tich: ";getline(cin,dienTich);
-    cout<<"Nhap tinh trang san: ";getline(cin,tinhTrang);
-    cout<<"Nhap gia thue(Theo Gio): ";cin>>giathue_TheoGio;
+    cout<<"Nhap tinh trang san: ";
+    getline(cin,tinhTrang);
+    cout<<"Nhap gia thue(Theo Gio): ";
+    cin>>giathue_TheoGio;
     cin.ignore();
-    cout<<"Nhap so nguoi toi da: ";getline(cin,soNguoiToiDa);
-    //cout<<"Thoi gian mo cua: ";getline(cin,thoigian_MoCua);
-    //cout<<"Thoi gian dong cua:";getline(cin,thoigian_DongCua);
-    cout<<"Phong thay do(Co / Khong): ";getline(cin,coPhongThayDo);
+    cout<<"Phong thay do(Co / Khong): ";
+    getline(cin,coPhongThayDo);
     if (coPhongThayDo != "Co" && coPhongThayDo != "Khong")
     {
         coPhongThayDo = "Khong";
     }
-    cout<<"He thong den(Co / Khong): ";getline(cin,coHeThongDen);
+    cout<<"He thong den(Co / Khong): ";
+    getline(cin,coHeThongDen);
     if (coHeThongDen != "Co" && coHeThongDen != "Khong")
     {
         coHeThongDen = "Khong";
     }
-    cout<<"Bao hiem(Co / Khong): ";getline(cin,coBaoHiem);
+    cout<<"Bao hiem(Co / Khong): ";
+    getline(cin,coBaoHiem);
     if (coBaoHiem != "Co" && coBaoHiem != "Khong")
     {
         coBaoHiem = "Khong";
     }
     //cout<<"Nguoi quan ly: ";getline(cin,nguoiQuanLy);
     //cout<<"So dien thoai lien he: ";getline(cin,sodienthoai_LienHe);
-    cout<<"Nhap so gio choi: ";cin>>SoGioChoi;
+    cout<<"Nhap so gio choi: ";
+    cin>>SoGioChoi;
     setGiaThue();
 }
+//ham output
 void HeThongSanTheThao::output()
 {
     cout<<"Ma san: "<<maSan<<endl;

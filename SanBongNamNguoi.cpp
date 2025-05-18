@@ -1,48 +1,7 @@
 #include "SanBongNamNguoi.h"
 #include <iostream>
 using namespace std;
-SanBongNamNguoi::SanBongNamNguoi()
-{
-    this->LoaiCo = "chua xac dinh";
-    this->ChieuDaiSan = "Chua xac dinh";
-    this->ChieuRongSan = "0";
-    this->LoaiBong = "0";
-    this->CoLuoi = "Chua xac dinh";
-    this->CoHangRao = "khong";
-    this->SoLuongPhatGoc = "khong";
-    this->CoHeThongTuoiNuoc = "0";
-    this->CameraGiamSat = "khong";
-    this->CoPhongNghi = "khong";
-    this->LichThiDau = "khong";
-    this->CoWifi = "Chua co";
-    this->SoLuongTrongTai = "khong";
-    this->CoHeThongAmThanh = "0";
-    this->MucDoBaoTri = "khong";  
-}
 
-SanBongNamNguoi::SanBongNamNguoi(
-                    string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong,
-                    string CoLuoi, string coHangRao, string soLuongPhatGoc,
-                    string CoHeThongTuoiNuoc, string cameraGiamSat, string CoPhongNghi,
-                    string LichThiDau, string CoWifi, string SoLuongTrongTai,
-                    string CoHeThongAmThanh, string MucDoBaoTri) 
-{
-    this->LoaiCo = LoaiCo;
-    this->ChieuDaiSan = ChieuDaiSan;
-    this->ChieuRongSan = ChieuRongSan;
-    this->LoaiBong = LoaiBong;
-    this->CoLuoi = CoLuoi;
-    this->CoHangRao = coHangRao;
-    this->SoLuongPhatGoc = SoLuongPhatGoc;
-    this->CoHeThongTuoiNuoc = CoHeThongTuoiNuoc;
-    this->CameraGiamSat = CameraGiamSat;
-    this->CoPhongNghi = CoPhongNghi;
-    this->LichThiDau = LichThiDau;
-    this->CoWifi = CoWifi;
-    this->SoLuongTrongTai = SoLuongTrongTai;
-    this->CoHeThongAmThanh = CoHeThongAmThanh;
-    this->MucDoBaoTri = MucDoBaoTri;
-}
 //getter setter
 void SanBongNamNguoi:: setLOAICO(string LoaiCo)
 {
@@ -164,8 +123,55 @@ string SanBongNamNguoi::getMUCDOBAOTRI()
 {
     return MucDoBaoTri;
 }
+//contructor khong tham so
+SanBongNamNguoi::SanBongNamNguoi()
+{
+    this->loaiSan = "SanBongNamNguoi";
+    this->thoigian_MoCua = "6:00";
+    this->thoigian_DongCua = "23:00";
+    this->soNguoiToiDa= -1;
+    this->LoaiCo = "chua xac dinh";
+    this->ChieuDaiSan = "Chua xac dinh";
+    this->ChieuRongSan = "0";
+    this->LoaiBong = "0";
+    this->CoLuoi = "Chua xac dinh";
+    this->CoHangRao = "khong";
+    this->SoLuongPhatGoc = "khong";
+    this->CoHeThongTuoiNuoc = "0";
+    this->CameraGiamSat = "khong";
+    this->CoPhongNghi = "khong";
+    this->LichThiDau = "khong";
+    this->CoWifi = "Chua co";
+    this->SoLuongTrongTai = "khong";
+    this->CoHeThongAmThanh = "0";
+    this->MucDoBaoTri = "khong";  
+}
 
-
+//contructor co tham so
+SanBongNamNguoi::SanBongNamNguoi(
+                    string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong,
+                    string CoLuoi, string coHangRao, string soLuongPhatGoc,
+                    string CoHeThongTuoiNuoc, string cameraGiamSat, string CoPhongNghi,
+                    string LichThiDau, string CoWifi, string SoLuongTrongTai,
+                    string CoHeThongAmThanh, string MucDoBaoTri) 
+{
+    this->LoaiCo = LoaiCo;
+    this->ChieuDaiSan = ChieuDaiSan;
+    this->ChieuRongSan = ChieuRongSan;
+    this->LoaiBong = LoaiBong;
+    this->CoLuoi = CoLuoi;
+    this->CoHangRao = coHangRao;
+    this->SoLuongPhatGoc = SoLuongPhatGoc;
+    this->CoHeThongTuoiNuoc = CoHeThongTuoiNuoc;
+    this->CameraGiamSat = CameraGiamSat;
+    this->CoPhongNghi = CoPhongNghi;
+    this->LichThiDau = LichThiDau;
+    this->CoWifi = CoWifi;
+    this->SoLuongTrongTai = SoLuongTrongTai;
+    this->CoHeThongAmThanh = CoHeThongAmThanh;
+    this->MucDoBaoTri = MucDoBaoTri;
+}
+//ham input
 void SanBongNamNguoi::input() 
 {
     cout << "\n--- THONG TIN SAN BONG NAM NGUOI ---\n";
@@ -173,8 +179,12 @@ void SanBongNamNguoi::input()
     cout << "Ma San: " << getMaSan() << endl;
     HeThongSanTheThao::input();
     cin.ignore();
-    cout << "Nhap loai co: "; 
+    cout << "Nhap loai co (Nhan Tao / Tu Nhien) "; 
     getline(cin, LoaiCo);
+    if (LoaiCo != "Co" && LoaiCo != "Khong")
+    {
+        LoaiCo = "Khong";
+    }
     cout << "Nhap chieu dai san: "; 
     getline(cin, ChieuDaiSan);
     cout << "Nhap chieu rong san: "; 
@@ -183,28 +193,61 @@ void SanBongNamNguoi::input()
     getline(cin, LoaiBong);
     cout << "Co luoi (Co / Khong): "; 
     getline(cin, CoLuoi);
+    if (CoLuoi != "Co" && CoLuoi != "Khong")
+    {
+        CoLuoi = "Khong";
+    }
     cout << "Co hang rao (Co / Khong): "; 
     getline(cin, CoHangRao);
-    cout << "So goc phat bong: "; 
+    if (CoHangRao != "Co" && CoHangRao != "Khong")
+    {
+        CoHangRao = "Khong";
+    }
+    cout << "So Luong Phat Goc: "; 
     getline(cin, SoLuongPhatGoc);
     cout << "He thong tuoi nuoc (Co / Khong): "; 
     getline(cin, CoHeThongTuoiNuoc);
+    if (CoHeThongTuoiNuoc != "Co" && CoHeThongTuoiNuoc != "Khong")
+    {
+        CoHeThongTuoiNuoc = "Khong";
+    }
     cout << "Camera giam sat (Co / Khong): "; 
     getline(cin, CameraGiamSat);
+    if (CameraGiamSat != "Co" && CameraGiamSat != "Khong")
+    {
+        CameraGiamSat = "Khong";
+    }
     cout << "Phong nghi (Co / Khong): "; 
     getline(cin, CoPhongNghi);
+    if (CoPhongNghi != "Co" && CoPhongNghi != "Khong")
+    {
+        CoPhongNghi = "Khong";
+    }
     cout << "Lich thi dau: "; 
     getline(cin, LichThiDau);
     cout << "Co wifi (Co / Khong): "; 
     getline(cin, CoWifi);
-    cout << "So trong tai: "; 
+    if (CoWifi != "Co" && CoWifi != "Khong")
+    {
+        CoWifi = "Khong";
+    }
+    cout << "So luong trong tai: "; 
     getline(cin, SoLuongTrongTai);
     cout << "He thong am thanh (Co / Khong): "; 
     getline(cin, CoHeThongAmThanh);
+    if (CoHeThongAmThanh != "Co" && CoHeThongAmThanh != "Khong")
+    {
+        CoHeThongAmThanh = "Khong";
+    }
     cout << "Muc do bao tri (tot/can sua chua): "; 
     getline(cin, MucDoBaoTri);
+    if (MucDoBaoTri != "Co" && MucDoBaoTri != "Khong")
+    {
+        MucDoBaoTri = "Khong xac dinh";
+    }
 }
 
+//ham output
 void SanBongNamNguoi::output() 
 {
     cout << "\n--- THONG TIN SAN BONG NAM NGUOI---\n";

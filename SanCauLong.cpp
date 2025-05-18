@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-
+//ham set va get
 void SanCauLong :: setSoLuongCotLuoi(string soluongCotLuoi)
 {
     this->soluongCotLuoi=soluongCotLuoi;
@@ -115,9 +115,13 @@ string SanCauLong::getDonVi_QuanLy()
 {
     return this->donvi_QuanLy;
 }
-
+//contructor khong tham so
 SanCauLong::SanCauLong()
 {
+    this->loaiSan = "SanCauLong";
+    this->thoigian_MoCua = "6:00";
+    this->thoigian_DongCua = "23:00";
+    this->soNguoiToiDa= 8;
     this->soluongCotLuoi = "";
     this->docaoCuaLuoi = "";
     this->matSan = "";
@@ -133,6 +137,7 @@ SanCauLong::SanCauLong()
     this->mucdo_HuHong = "";
     this->donvi_QuanLy = "";
 }
+//contructor co tham so
 SanCauLong::SanCauLong(
             string soluongCotLuoi, string docaoCuaLuoi, string matSan, string mucChongTham,
             string coThamTruot, string soLuongVot, string soLuongCau,string coPhongKhoiDong,
@@ -156,27 +161,64 @@ SanCauLong::SanCauLong(
     this->donvi_QuanLy = donvi_QuanLy;
 }
 
+//ham input
 void SanCauLong::input()
 {
     cout << "\n--- THONG TIN SAN CAU LONG---\n";
     setMaSan("SanCauLong"); 
     cout << "Ma San: " << getMaSan() << endl;
     HeThongSanTheThao::input();
-    cout<<"Nhap so luong cot luoi: ";getline(cin,soluongCotLuoi);
-    cout<<"Nhap  do cao cua luoi: ";getline(cin,docaoCuaLuoi);
-    cout<<"Nhap muc chong tham: ";getline(cin,mucChongTham);
-    cout<<"Co tham truot: ";getline(cin,coThamTruot);
-    cout<<"Nhap so luong vot: ";getline(cin,soLuongVot);
-    cout<<"Nhap so luong cau: ";getline(cin,soLuongCau);
-    cout<<"Phong khoi dong(Co / Khong): ";getline(cin,coPhongKhoiDong);
-    cout<<"Loai vot phu hop: ";getline(cin,loaivotPhuHop);
-    cout<<"Phong nghi(Co / Khong): ";getline(cin,coPhongNghi);
-    cout<<"So luong nguoi toi da: ";getline(cin,soluong_NguoiToiDa);
-    cout<<"Lich su su dung: ";getline(cin,lichsu_SuDung);
-    cout<<"Muc do hu hong: ";getline(cin,mucdo_HuHong);
-    cout<<"Don vi quan ly: ";getline(cin,donvi_QuanLy);
+    cin.ignore();
+    cout<<"Nhap so luong cot luoi: ";
+    getline(cin,soluongCotLuoi);
+    cout<<"Nhap do cao cua luoi: ";
+    getline(cin,docaoCuaLuoi);
+    cout<<"Mat San (Tham / Son)";
+    getline(cin,matSan);
+    if (matSan != "Co" && matSan != "Khong")
+    {
+        matSan = "Khong xac dinh";
+    }
+    cout<<"Nhap muc chong tham (Tot / Khong Tot):  ";
+    getline(cin,mucChongTham);
+    if (mucChongTham != "Co" && mucChongTham != "Khong")
+    {
+        mucChongTham = "Khong xac dinh";
+    }
+    cout<<"Co tham truot (Co / Khong): ";
+    getline(cin,coThamTruot);
+    if (coThamTruot != "Co" && coThamTruot != "Khong")
+    {
+        coThamTruot = "Khong xac dinh";
+    }
+    cout<<"Nhap so luong vot: ";
+    getline(cin,soLuongVot);
+    cout<<"Nhap so luong cau: ";
+    getline(cin,soLuongCau);
+    cout<<"Loai vot phu hop: ";
+    getline(cin,loaivotPhuHop);
+    cout<<"Phong khoi dong(Co / Khong): ";
+    getline(cin,coPhongKhoiDong);
+    if (coPhongKhoiDong != "Co" && coPhongKhoiDong != "Khong")
+    {
+        coPhongKhoiDong = "Khong";
+    }
+    cout<<"Phong nghi(Co / Khong): ";
+    getline(cin,coPhongNghi);
+    if (coPhongNghi != "Co" && coPhongNghi != "Khong")
+    {
+        coPhongNghi = "Khong";
+    }
+    cout<<"So luong nguoi toi da: ";
+    getline(cin,soluong_NguoiToiDa);
+    cout<<"Lich su su dung: ";
+    getline(cin,lichsu_SuDung);
+    cout<<"Muc do hu hong: ";
+    getline(cin,mucdo_HuHong);
+    cout<<"Don vi quan ly: ";
+    getline(cin,donvi_QuanLy);
 }
-
+//ham output
 void SanCauLong::output()
 {
     cout<<"\n------THONG TIN SAN CAU LONG------\n";

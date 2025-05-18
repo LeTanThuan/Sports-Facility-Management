@@ -1,1 +1,4 @@
-
+SBBN1 Thuan SanBongBayNguoi 3 50 150
+SBNN1 THuann SanBongNamNguoi 2 40 80
+SPB1 Thuan SanPickleBall 1 80 80
+SBBN2 THuan SanBongBayNguoi 6 50 300

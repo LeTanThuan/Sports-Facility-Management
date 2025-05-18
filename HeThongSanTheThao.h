@@ -6,7 +6,7 @@ using namespace std;
 
 class HeThongSanTheThao 
 {
-private:
+protected:
     string maSan;
     string tenSan;
     string loaiSan;
@@ -14,7 +14,7 @@ private:
     string dienTich;
     string tinhTrang;
     float  giathue_TheoGio; 
-    string soNguoiToiDa;
+    int soNguoiToiDa;
     string thoigian_MoCua;
     string thoigian_DongCua;
     string coPhongThayDo;
@@ -36,7 +36,7 @@ HeThongSanTheThao();
 
 //contructor
 HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, string dienTich, string tinhTrang,
-                float giathue_TheoGio, string soNguoiToiDa, string thoigian_MoCua, string thoigian_DongCua,
+                float giathue_TheoGio, string thoigian_MoCua, string thoigian_DongCua,
                 string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi,float GiaThue);
 
 //set va get
@@ -56,8 +56,8 @@ string getTinhTrang();
 void setMaSan(float giathue_TheoGio);
 void setGiaThue_TheoGio(float giathue_TheoGio);
 float getGiaThue_TheoGio();
-void setSoNguoiToiDa(string soNguoiToiDa);
-string getSoNguoiToiDa();
+void setSoNguoiToiDa(int soNguoiToiDa);
+int getSoNguoiToiDa();
 void setThoiGian_MoCua(string thoigian_MoCua);
 string getThoiGian_MoCua();
 void setThoiGian_DongCua(string thoigian_DongCua);

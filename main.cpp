@@ -23,8 +23,10 @@ int main()
         cout <<"\n9. Cap nhat gia thue theo ID";
         cout <<"\n10. Hien thi san theo loai";
         cout <<"\n11. Thong ke doanh thu theo loai";
-        cout <<"\n12. Thoat";
-        cout <<"\n================================";
+        cout <<"\n12. Thong ke so luong theo loai";
+        cout <<"\n13. Thong ke theo khoang gia";
+        cout <<"\n14. Tra cuu thoi gian hoat dong cua tung san";
+        cout <<"\n15. Thoat";
         cout <<"\nNhap lua chon cua ban: ";
         cin >> luaChon;
 
@@ -59,15 +61,24 @@ int main()
             case 10:
                 quanLySan.hienThiTheoLoai();
                 break;
+
             case 11:
                 quanLySan.thongke_DoanhThuTheoLoai();
                 break;
             case 12:
+                quanLySan.thongke_SoLuongTheoLoai();
+                break;
+            case 13:
+                quanLySan.thongke_TheoKhoangGia();
+                break;
+            case 14:
+                quanLySan.traCuuThoiGianHoatDong();
+            case 15:
                 cout <<"Thoat chuong trinh!";
                 break;
             default:
                 cout <<"Lua chon khong hop le, vui long chon lai!";
         }
-    } while (luaChon != 12);
+    } while (luaChon != 15);
     return 0;
 }
