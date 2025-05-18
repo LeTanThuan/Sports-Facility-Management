@@ -24,6 +24,12 @@ private:
     string sodienthoai_LienHe;
     float SoGioChoi;
     float GiaThue;
+
+    static int counter_SBBN; 
+    static int counter_SBNN;
+    static int counter_SCL;
+    static int counter_SPB; 
+
 public:
 //contructor
 HeThongSanTheThao();
@@ -36,9 +42,9 @@ HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, st
 //set va get
 void setSoGioChoi(float SoGioChoi);
 float getSoGioChoi();
-void setGiaThue(float GiaThue);
+void setGiaThue();
 float getGiaThue();
-void setMaSan(string maSan);
+void setMaSan(string masan);
 string getMaSan();
 void setTenSan(string tenSan);
 string getTenSan();
@@ -51,6 +57,7 @@ string getDienTich();
 void setTinhTrang(string tinhTrang);
 string getTinhTrang();
 void setMaSan(float giathue_TheoGio);
+void setGiaThue_TheoGio(float giathue_TheoGio);
 float getGiaThue_TheoGio();
 void setSoNguoiToiDa(string soNguoiToiDa);
 string getSoNguoiToiDa();

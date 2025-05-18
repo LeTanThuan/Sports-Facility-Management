@@ -169,6 +169,8 @@ string SanBongNamNguoi::getMUCDOBAOTRI()
 void SanBongNamNguoi::input() 
 {
     cout << "\n--- THONG TIN SAN BONG NAM NGUOI ---\n";
+    setMaSan("SanBongNamNguoi"); 
+    cout << "Ma San: " << getMaSan() << endl;
     HeThongSanTheThao::input();
     cin.ignore();
     cout << "Nhap loai co: "; 
@@ -179,25 +181,25 @@ void SanBongNamNguoi::input()
     getline(cin, ChieuRongSan);
     cout << "Nhap loai bong: "; 
     getline(cin, LoaiBong);
-    cout << "Co luoi (co/khong): "; 
+    cout << "Co luoi (Co / Khong): "; 
     getline(cin, CoLuoi);
-    cout << "Co hang rao (co/khong): "; 
+    cout << "Co hang rao (Co / Khong): "; 
     getline(cin, CoHangRao);
     cout << "So goc phat bong: "; 
     getline(cin, SoLuongPhatGoc);
-    cout << "He thong tuoi nuoc (co/khong): "; 
+    cout << "He thong tuoi nuoc (Co / Khong): "; 
     getline(cin, CoHeThongTuoiNuoc);
-    cout << "Camera giam sat (co/khong): "; 
+    cout << "Camera giam sat (Co / Khong): "; 
     getline(cin, CameraGiamSat);
-    cout << "Phong nghi (co/khong): "; 
+    cout << "Phong nghi (Co / Khong): "; 
     getline(cin, CoPhongNghi);
     cout << "Lich thi dau: "; 
     getline(cin, LichThiDau);
-    cout << "Co wifi (co/khong): "; 
+    cout << "Co wifi (Co / Khong): "; 
     getline(cin, CoWifi);
     cout << "So trong tai: "; 
     getline(cin, SoLuongTrongTai);
-    cout << "He thong am thanh (co/khong): "; 
+    cout << "He thong am thanh (Co / Khong): "; 
     getline(cin, CoHeThongAmThanh);
     cout << "Muc do bao tri (tot/can sua chua): "; 
     getline(cin, MucDoBaoTri);

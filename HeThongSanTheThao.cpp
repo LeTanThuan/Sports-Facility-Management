@@ -3,6 +3,12 @@
 
 using namespace std;
 
+int HeThongSanTheThao::counter_SBBN = 1;
+int HeThongSanTheThao::counter_SBNN = 1;
+int HeThongSanTheThao::counter_SCL = 1;
+int HeThongSanTheThao::counter_SPB = 1;
+
+
 HeThongSanTheThao::HeThongSanTheThao() 
 {
     this->maSan = "A";
@@ -56,9 +62,26 @@ float HeThongSanTheThao::getSoGioChoi()
 {
     return SoGioChoi;
 }
-void HeThongSanTheThao::setMaSan(string maSan)
+void HeThongSanTheThao::setMaSan(string masan)
 {
-    maSan=maSan;
+    if (masan == "SanBongBayNguoi") 
+    {
+        maSan = "SBBN" + to_string(counter_SBBN++);
+    } else if (masan == "SanBongNamNguoi") 
+    {
+        maSan = "SBNN" + to_string(counter_SBNN++);
+    }else if (masan == "SanCauLong")
+    {
+        maSan = "SCL" + to_string(counter_SCL++);
+    }else if (masan == "SanPickleBall")
+    {
+        maSan = "SPB" + to_string(counter_SPB++);
+    }
+     else 
+    {
+        maSan = "SAN" + to_string(rand() % 1000);
+    }
+
 }
 string HeThongSanTheThao::getMaSan()
 {
@@ -104,7 +127,7 @@ string HeThongSanTheThao::getTinhTrang()
 {
     return tinhTrang;
 }
-void HeThongSanTheThao::setMaSan(float giathue_TheoGio)
+void HeThongSanTheThao::setGiaThue_TheoGio(float giathue_TheoGio)
 {
     giathue_TheoGio=giathue_TheoGio;
 }
@@ -176,43 +199,54 @@ string HeThongSanTheThao::getSoDienThoai_LienHe()
 {
     return sodienthoai_LienHe;
 }
-void HeThongSanTheThao::setGiaThue(float GiaThue)
+void HeThongSanTheThao::setGiaThue()
 {
-    GiaThue=GiaThue;
+    GiaThue= giathue_TheoGio * SoGioChoi;
 }
 float HeThongSanTheThao::getGiaThue()
 {
     return GiaThue;
 }
 
-
 void HeThongSanTheThao::input() 
 {  
     cin.ignore();
-    cout<<"Nhap ma san: ";getline(cin,maSan);
     cout<<"Nhap ten san: ";getline(cin,tenSan);
-    cout<<"Nhap loai san: ";getline(cin,loaiSan);
+    cout<<"Nhap loai san (Trong Nha / Ngoai Troi): ";getline(cin,loaiSan);
+    if (loaiSan != "Trong Nha" && loaiSan != "Ngoai Troi") 
+    {
+        loaiSan = "Khong Xac Dinh";
+    }
     cout<<"Nhap dia chi: ";getline(cin,diaChi);
     //cout<<"Nhap dien tich: ";getline(cin,dienTich);
     cout<<"Nhap tinh trang san: ";getline(cin,tinhTrang);
-    cout<<"Nhap gia thue(theo gio): ";cin>>giathue_TheoGio;
+    cout<<"Nhap gia thue(Theo Gio): ";cin>>giathue_TheoGio;
     cin.ignore();
     cout<<"Nhap so nguoi toi da: ";getline(cin,soNguoiToiDa);
     //cout<<"Thoi gian mo cua: ";getline(cin,thoigian_MoCua);
     //cout<<"Thoi gian dong cua:";getline(cin,thoigian_DongCua);
-    cout<<"Phong thay do(co/khong): ";getline(cin,coPhongThayDo);
-    cout<<"He thong den(co/khong): ";getline(cin,coHeThongDen);
-    cout<<"Bao hiem(co/khong): ";getline(cin,coBaoHiem);
+    cout<<"Phong thay do(Co / Khong): ";getline(cin,coPhongThayDo);
+    if (coPhongThayDo != "Co" && coPhongThayDo != "Khong")
+    {
+        coPhongThayDo = "Khong";
+    }
+    cout<<"He thong den(Co / Khong): ";getline(cin,coHeThongDen);
+    if (coHeThongDen != "Co" && coHeThongDen != "Khong")
+    {
+        coHeThongDen = "Khong";
+    }
+    cout<<"Bao hiem(Co / Khong): ";getline(cin,coBaoHiem);
+    if (coBaoHiem != "Co" && coBaoHiem != "Khong")
+    {
+        coBaoHiem = "Khong";
+    }
     //cout<<"Nguoi quan ly: ";getline(cin,nguoiQuanLy);
     //cout<<"So dien thoai lien he: ";getline(cin,sodienthoai_LienHe);
-    cout<<"Gia thue: ";cin>>GiaThue;
-    cin.ignore();
     cout<<"Nhap so gio choi: ";cin>>SoGioChoi;
-
+    setGiaThue();
 }
 void HeThongSanTheThao::output()
 {
-    cout<<"So Gio: "<<SoGioChoi<<endl;
     cout<<"Ma san: "<<maSan<<endl;
     cout<<"Ten san: "<<tenSan<<endl;
     cout<<"Loai san: "<<loaiSan<<endl;
@@ -223,14 +257,13 @@ void HeThongSanTheThao::output()
     cout<<"So nguoi toi da: "<<soNguoiToiDa<<endl;
     cout<<"Thoi gian mo cua: "<<thoigian_MoCua<<endl;
     cout<<"Thoi gian dong cua:"<<thoigian_DongCua<<endl;
-    cout<<"Phong thay do(co/khong): "<<coPhongThayDo<<endl;
-    cout<<"He thong den(co/khong): "<<coHeThongDen<<endl;
-    cout<<"Bao hiem(co/khong): "<<coBaoHiem<<endl;
+    cout<<"Phong thay do: "<<coPhongThayDo<<endl;
+    cout<<"He thong den: "<<coHeThongDen<<endl;
+    cout<<"Bao hiem: "<<coBaoHiem<<endl;
     cout<<"Nguoi quan ly: "<<nguoiQuanLy<<endl;
     cout<<"So dien thoai lien he: "<<sodienthoai_LienHe<<endl;
     cout<<"So gio choi: "<<SoGioChoi<<endl;
     cout<<"Gia thue: "<<GiaThue<<endl;
-    cout<<"Nhap so gio choi: "<<SoGioChoi<<endl;
 }
 
 HeThongSanTheThao:: ~HeThongSanTheThao()

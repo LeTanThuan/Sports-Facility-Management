@@ -21,6 +21,7 @@ class QLyHeThongSanTheThao
     ~QLyHeThongSanTheThao();
     QLyHeThongSanTheThao();
     QLyHeThongSanTheThao(int n);
+    
     void input();
     void themSan();
     void hienthi_TatCaSan();

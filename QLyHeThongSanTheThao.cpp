@@ -61,7 +61,7 @@ QLyHeThongSanTheThao::~QLyHeThongSanTheThao() {
 void QLyHeThongSanTheThao::themSan() {
     int choose=0;
     if (n < 100) {
-        cout<<"\nBan muon them san gi\n 1. San Bong Nam Nguoi\n 3. San Cau Long\n 4. San PickleBall\n 5. Đe huy khong them san\n";
+        cout<<"\nBan muon them san gi\n 1. San Bong Nam Nguoi\n 3. San Cau Long\n 4. San PickleBall\n 5. De huy khong them san\n";
         cin>>choose;
         if (choose == 5)
             cout<<"Ban da huy khong them san!";
@@ -90,13 +90,13 @@ void QLyHeThongSanTheThao::themSan() {
             n++;
         }
     } else {
-        cout << "Khong the them san moi, danh sach sy!" << endl;
+        cout <<"Khong the them san moi, danh sach da day!" << endl;
     }
 }
 
 // Hiển thị danh sách sân
 void QLyHeThongSanTheThao::hienthi_TatCaSan() {
-    cout << "\nDanh sach tat ca cac san:\n";
+    cout <<"\nDanh sach tat ca cac san:\n";
     for (int i = 0; i < n; i++) {
         list[i]->output();
     }
@@ -108,14 +108,13 @@ void QLyHeThongSanTheThao::sapxep_TheoGio() {
             if (list[j]->getSoGioChoi() < list[minIndex]->getSoGioChoi()) {
                 minIndex = j;
             }
-        }
-        // Hoán đổi phần tử
+        }       
         HeThongSanTheThao* temp = list[i];
         list[i] = list[minIndex];
         list[minIndex] = temp;
     }
 
-    cout << "\nDanh sach san da duoc xap xep theo gio hoat dong!\n";
+    cout <<"\nDanh sach san da duoc xap xep theo gio hoat dong!\n";
 }
 
 void QLyHeThongSanTheThao::sapxep_TheoTien()
@@ -129,13 +128,13 @@ void QLyHeThongSanTheThao::sapxep_TheoTien()
                 minIndex = j;
             }
         }
-        // Hoán đổi
+        
         HeThongSanTheThao* temp = list[i];
         list[i] = list[minIndex];
         list[minIndex] = temp;
     }
 
-    cout << "\nDanh sach san da duoc sap xep theo gia thue!\n";
+    cout <<"\nDanh sach san da duoc sap xep theo gia thue!\n";
 }
 float QLyHeThongSanTheThao::tinhTongTienThuDuoc() 
 {
@@ -162,21 +161,20 @@ void QLyHeThongSanTheThao::xoasan_TheoMa()
         {
             found = true;
             delete list[i]; 
-            // Dịch chuyển danh sách
             for (int j = i; j < n - 1; j++) 
             {
                 list[j] = list[j + 1];
             }
-            list[n - 1] = nullptr; // Xóa phần tử cuối cùng sau khi dịch chuyển
-            n--; // Giảm số lượng sân
-            cout << "\nSan co ID " << idToDelete << " đa duoc xoa thanh cong!\n";
+            list[n - 1] = nullptr; 
+            n--; 
+            cout <<"\nSan co ID " << idToDelete << " da duoc xoa thanh cong!\n";
             break;
         }
     }
 
     if (!found)
     {
-        cout << "\nKhong tim thay san co  ID " << idToDelete << endl;
+        cout <<"\nKhong tim thay san co  ID " << idToDelete << endl;
     }
 }
 
@@ -186,7 +184,7 @@ void QLyHeThongSanTheThao::luu_DanhSachRaFile()
 
     if (!outFile) 
     {
-        cout << "Loi: Khong the mo file DanhSachSan.txt để ghi du lieu!" << endl;
+        cout <<"Loi: Khong the mo file DanhSachSan.txt để ghi du lieu!" << endl;
         return;
     }
 
@@ -200,7 +198,7 @@ void QLyHeThongSanTheThao::luu_DanhSachRaFile()
     }
 
     outFile.close();
-    cout << "\n Danh sach san da duoc luu vao file DanhSachSan.txt`!\n";
+    cout << "\nDanh sach san da duoc luu vao file DanhSachSan.txt`!\n";
 }
 
 
@@ -217,12 +215,12 @@ void QLyHeThongSanTheThao::capNhatGiaThue()
     {
         if (list[i]->getMaSan() == id) 
         {
-            list[i]->setGiaThue(newPrice);
-            cout << " Gia thue san ID " << id << " da duoc cap nhat thanh " << newPrice << "K/h\n";
+            list[i]->setGiaThue_TheoGio(newPrice);
+            cout <<"Gia thue san ID "<< id <<" da duoc cap nhat thanh " << newPrice << "K/h\n";
             return;
         }
     }
-    cout << "Khong tim thay san ID " << id << endl;
+    cout <<"Khong tim thay san ID " << id << endl;
 }
 
 // Đếm số lượng sân theo loại (Bóng đá, cầu lông, pickleball...)
@@ -243,9 +241,10 @@ void QLyHeThongSanTheThao::demSoSanTheoLoai(string loai)
 void QLyHeThongSanTheThao::hienThiTheoLoai() 
 {
     string loai;
+    cin.ignore();
     cout<<"Nhap loai san can hien thi: ";
     getline(cin,loai);
-    cout << "\n Danh sach san loai: " << loai << endl;
+    cout << "\nDanh sach san loai: " << loai << endl;
     for (int i = 0; i < n; i++) 
     {
         if (list[i]->getLoaiSan() == loai) 
@@ -272,22 +271,22 @@ void QLyHeThongSanTheThao::thongke_DoanhThuTheoLoai()
     
     for (int i = 0; i < n; i++) 
     {
-        if (list[i]->getLoaiSan() == "Bong da 5") 
+        if (list[i]->getLoaiSan() == "SanBongNamNguoi") 
         {
-            doanhThuBong5 += list[i]->getGiaThue() * list[i]->getSoGioChoi();
-        } else if (list[i]->getLoaiSan() == "Bong da 7") 
+            doanhThuBong5 += list[i]->getGiaThue_TheoGio() * list[i]->getSoGioChoi();
+        } else if (list[i]->getLoaiSan() == "SanBongBayNguoi") 
         {
-            doanhThuBong7 += list[i]->getGiaThue() * list[i]->getSoGioChoi();
-        } else if (list[i]->getLoaiSan() == "Cau long") 
+            doanhThuBong7 += list[i]->getGiaThue_TheoGio() * list[i]->getSoGioChoi();
+        } else if (list[i]->getLoaiSan() == "SanCauLong") 
         {
-            doanhThuCauLong += list[i]->getGiaThue() * list[i]->getSoGioChoi();
-        }else if (list[i]->getLoaiSan() == "PickleBall") 
+            doanhThuCauLong += list[i]->getGiaThue_TheoGio() * list[i]->getSoGioChoi();
+        }else if (list[i]->getLoaiSan() == "SanPickleBall") 
         {
-            doanhthuPickleBall += list[i]->getGiaThue() * list[i]->getSoGioChoi();
+            doanhthuPickleBall += list[i]->getGiaThue_TheoGio() * list[i]->getSoGioChoi();
         }
     }
 
-    cout << "\n Thong Ke Doanh Thu Theo Loai:\n";
+    cout << "\nThong Ke Doanh Thu Theo Loai:\n";
     cout << "Doanh Thu Bong Da Bay Nguoi: " << doanhThuBong5 << "K\n";
     cout << "Doanh Thu Bong Da Nam Nguoi: " << doanhThuBong7 << "K\n";
     cout << "Doanh thu Cau Long: " << doanhThuCauLong << "K\n";

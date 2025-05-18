@@ -158,6 +158,8 @@ SanPickleBall::SanPickleBall(
 void SanPickleBall::input()
 {
     cout << "\n--- THONG TIN SAN PICKLEBALL---\n";
+    setMaSan("SanPickleBall"); 
+    cout << "Ma San: " << getMaSan() << endl;
     HeThongSanTheThao::input();
     cout<<"Nhap so luong cot luoi: ";getline(cin,soluongCotLuoi);
     cout<<"Nhap  do cao cua luoi: ";getline(cin,docaoCuaLuoi);
@@ -165,9 +167,9 @@ void SanPickleBall::input()
     cout<<"Co tham truot: ";getline(cin,coThamTruot);
     cout<<"Nhap so luong vot: ";getline(cin,soLuongVot);
     cout<<"Nhap so luong bong: ";getline(cin,soLuongBong);
-    cout<<"Phong khoi dong(co/khong): ";getline(cin,coPhongKhoiDong);
+    cout<<"Phong khoi dong(Co / Khong): ";getline(cin,coPhongKhoiDong);
     cout<<"Loai vot phu hop: ";getline(cin,loaivotPhuHop);
-    cout<<"Phong nghi(co/khong): ";getline(cin,coPhongNghi);
+    cout<<"Phong nghi(Co / Khong): ";getline(cin,coPhongNghi);
     cout<<"So luong nguoi toi da: ";getline(cin,soluong_NguoiToiDa);
     cout<<"Lich su su dung: ";getline(cin,lichsu_SuDung);
     cout<<"Muc do hu hong: ";getline(cin,mucdo_HuHong);
