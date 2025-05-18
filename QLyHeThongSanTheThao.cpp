@@ -61,7 +61,11 @@ QLyHeThongSanTheThao::~QLyHeThongSanTheThao() {
 void QLyHeThongSanTheThao::themSan() {
     int choose=0;
     if (n < 100) {
-        cout<<"\nBan muon them san gi\n 1. San Bong Nam Nguoi\n 3. San Cau Long\n 4. San PickleBall\n 5. De huy khong them san\n";
+        cout <<"\nBan muon them san gi";
+        cout <<"\n1. San Bong Nam Nguoi";
+        cout <<"\n3. San Cau Long";
+        cout <<"\n4. San PickleBall";
+        cout <<"\n5. De huy khong them san\n";
         cin>>choose;
         if (choose == 5)
             cout<<"Ban da huy khong them san!";

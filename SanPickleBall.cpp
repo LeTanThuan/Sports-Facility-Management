@@ -193,7 +193,6 @@ void SanPickleBall::output()
     cout<<"Lich su su dung: "<< lichsu_SuDung << endl;
     cout<<"Muc do hu hong: "<< mucdo_HuHong << endl;
     cout<<"Don vi quan ly: "<< donvi_QuanLy << endl;   
-    
 }
 
 

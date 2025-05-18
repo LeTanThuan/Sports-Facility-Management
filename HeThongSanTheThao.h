@@ -40,10 +40,7 @@ HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, st
                 string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi,float GiaThue);
 
 //set va get
-void setSoGioChoi(float SoGioChoi);
-float getSoGioChoi();
-void setGiaThue();
-float getGiaThue();
+
 void setMaSan(string masan);
 string getMaSan();
 void setTenSan(string tenSan);
@@ -75,6 +72,10 @@ void setNguoiQuanLy(string nguoiQuanLy);
 string getNguoiQuanLy();
 void setSoDienThoai_LienHe(string sodienthoai_LienHe);
 string getSoDienThoai_LienHe();
+void setSoGioChoi(float SoGioChoi);
+float getSoGioChoi();
+void setGiaThue();
+float getGiaThue();
 
 virtual void input();
 
