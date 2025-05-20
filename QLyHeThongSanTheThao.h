@@ -35,6 +35,8 @@ class QLyHeThongSanTheThao
     float tinhKhuyenMai(float giaThue, int soGioChoi);
     //ham tinh tong tien thu duoc
     float tinhTongTienThuDuoc();
+    //ham hien thi san theo ma san
+    void hienthi_SanTheoMaSan();
     //ham xoa san theo ma
     void xoasan_TheoMa();
     //ham luu danh sach ra file

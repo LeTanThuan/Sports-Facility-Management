@@ -216,8 +216,6 @@ void HeThongSanTheThao::input()
     {
         coBaoHiem = "Khong";
     }
-    //cout<<"Nguoi quan ly: ";getline(cin,nguoiQuanLy);
-    //cout<<"So dien thoai lien he: ";getline(cin,sodienthoai_LienHe);
     cout<<"Nhap so gio choi: ";
     cin>>SoGioChoi;
     setGiaThue();
@@ -230,7 +228,6 @@ void HeThongSanTheThao::output()
     cout<<"Loai san: "<<loaiSan<<endl;
     cout<<"Tinh trang san: "<<tinhTrang<<endl;
     cout<<"Gia thue(theo gio): "<<giathue_TheoGio<<endl;
-    cout<<"So nguoi toi da: "<<soNguoiToiDa<<endl;
     cout<<"Thoi gian mo cua: "<<thoigian_MoCua<<endl;
     cout<<"Thoi gian dong cua:"<<thoigian_DongCua<<endl;
     cout<<"Phong thay do: "<<coPhongThayDo<<endl;

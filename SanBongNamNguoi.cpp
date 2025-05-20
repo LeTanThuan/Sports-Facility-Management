@@ -130,11 +130,11 @@ SanBongNamNguoi::SanBongNamNguoi()
     this->thoigian_MoCua = "6:00";
     this->thoigian_DongCua = "23:00";
     this->soNguoiToiDa= -1;
-    this->LoaiCo = "chua xac dinh";
-    this->ChieuDaiSan = "Chua xac dinh";
-    this->ChieuRongSan = "0";
-    this->LoaiBong = "0";
-    this->CoLuoi = "Chua xac dinh";
+    this->LoaiCo = "Khong Xac Dinh";
+    this->ChieuDaiSan = "36m";
+    this->ChieuRongSan = "27m";
+    this->LoaiBong = "Bong 4";
+    this->CoLuoi = "Khong Xac Dinh";
     this->CoHangRao = "khong";
     this->SoLuongPhatGoc = "khong";
     this->CoHeThongTuoiNuoc = "0";
@@ -143,7 +143,7 @@ SanBongNamNguoi::SanBongNamNguoi()
     this->LichThiDau = "khong";
     this->CoWifi = "Chua co";
     this->SoLuongTrongTai = "khong";
-    this->CoHeThongAmThanh = "0";
+    this->CoHeThongAmThanh = "Khong Xac Dinh";
     this->MucDoBaoTri = "khong";  
 }
 
@@ -185,12 +185,6 @@ void SanBongNamNguoi::input()
     {
         LoaiCo = "Khong";
     }
-    cout << "Nhap chieu dai san: "; 
-    getline(cin, ChieuDaiSan);
-    cout << "Nhap chieu rong san: "; 
-    getline(cin, ChieuRongSan);
-    cout << "Nhap loai bong: "; 
-    getline(cin, LoaiBong);
     cout << "Co luoi (Co / Khong): "; 
     getline(cin, CoLuoi);
     if (CoLuoi != "Co" && CoLuoi != "Khong")

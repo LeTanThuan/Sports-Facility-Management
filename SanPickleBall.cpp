@@ -121,20 +121,20 @@ SanPickleBall::SanPickleBall()
     this->thoigian_MoCua = "6:00";
     this->thoigian_DongCua = "23:00";
     this->soNguoiToiDa= 8;
-    this->soluongCotLuoi = "";
-    this->docaoCuaLuoi = "";
-    this->matSan = "";
-    this->mucChongTham = "";
-    this->coThamTruot = "";
-    this->soLuongVot = "";
-    this->soLuongBong = "";
-    this->coPhongKhoiDong = "";
-    this->loaivotPhuHop = "";
-    this->coPhongNghi = "";
-    this->soluong_NguoiToiDa = "";
-    this->lichsu_SuDung = "";
-    this->mucdo_HuHong = "";
-    this->donvi_QuanLy = "";
+    this->soluongCotLuoi = "2";
+    this->docaoCuaLuoi = "1m";
+    this->matSan = "Tham";
+    this->mucChongTham = "Khong Xac Dinh";
+    this->coThamTruot = "Khong Xac Dinh";
+    this->soLuongVot = "8";
+    this->soLuongBong = "Khong Xac Dinh";
+    this->coPhongKhoiDong = "Khong Xac Dinh";
+    this->loaivotPhuHop = "Vot PickleBall";
+    this->coPhongNghi = "Khong Xac Dinh";
+    this->soluong_NguoiToiDa = "8";
+    this->lichsu_SuDung = "Khong Xac Dinh";
+    this->mucdo_HuHong = "Khong Xac Dinh";
+    this->donvi_QuanLy = "Khong Xac Dinh";
 }
 //contructor co tham so
 SanPickleBall::SanPickleBall(
@@ -167,10 +167,6 @@ void SanPickleBall::input()
     cout << "Ma San: " << getMaSan() << endl;
     HeThongSanTheThao::input();
     cin.ignore();
-    cout<<"Nhap so luong cot luoi: ";
-    getline(cin,soluongCotLuoi);
-    cout<<"Nhap  do cao cua luoi: ";
-    getline(cin,docaoCuaLuoi);
     cout<<"Mat San (Tham / Son)";
     getline(cin,matSan);
     if (matSan != "Co" && matSan != "Khong")
@@ -189,12 +185,6 @@ void SanPickleBall::input()
     {
         coThamTruot = "Khong xac dinh";
     }
-    cout<<"Nhap so luong vot: ";
-    getline(cin,soLuongVot);
-    cout<<"Nhap so luong bong: ";
-    getline(cin,soLuongBong);
-    cout<<"Loai vot phu hop: ";
-    getline(cin,loaivotPhuHop);
     cout<<"Phong khoi dong(Co / Khong): ";
     getline(cin,coPhongKhoiDong);
     if (coPhongKhoiDong != "Co" && coPhongKhoiDong != "Khong")
@@ -207,8 +197,6 @@ void SanPickleBall::input()
     {
         coPhongNghi = "Khong";
     }
-    cout<<"So luong nguoi toi da: ";
-    getline(cin,soluong_NguoiToiDa);
     cout<<"Lich su su dung: ";
     getline(cin,lichsu_SuDung);
     cout<<"Muc do hu hong: ";

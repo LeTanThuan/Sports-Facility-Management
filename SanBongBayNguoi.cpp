@@ -132,20 +132,20 @@ SanBongBayNguoi::SanBongBayNguoi()
     this->thoigian_MoCua = "6:00";
     this->thoigian_DongCua = "23:00";
     this->soNguoiToiDa = -1;
-    this->LoaiCo = "chua xac dinh";
-    this->ChieuDaiSan = "Chua xac dinh";
-    this->ChieuRongSan = "0";
-    this->LoaiBong = "0";
+    this->LoaiCo = "Khong Xac Dinh";
+    this->ChieuDaiSan = "55m";
+    this->ChieuRongSan = "36m";
+    this->LoaiBong = "Bong 5";
     this->CoLuoi = "Khong Xac Dinh";
     this->CoHangRao = "Khong Xac Dinh";
     this->SoLuongPhatGoc = "Khong Xac Dinh";
-    this->CoHeThongTuoiNuoc = "0";
+    this->CoHeThongTuoiNuoc = "Khong Xac Dinh";
     this->CameraGiamSat = "Khong Xac Dinh";
     this->CoGheNgoi = "Khong Xac Dinh";
     this->LichThiDau = "Khong Xac Dinh";
-    this->CoWifi = "Chua co";
+    this->CoWifi = "Khong Xac Dinh";
     this->SoLuongTrongTai = "Khong Xac Dinh";
-    this->CoHeThongAmThanh = "0";
+    this->CoHeThongAmThanh = "Khong Xac Dinh";
     this->MucDoBaoTri = "Khong Xac Dinh";  
 }
 //contructor co tham so
@@ -181,14 +181,7 @@ void SanBongBayNguoi::input()
     HeThongSanTheThao::input();
     cin.ignore();
     cout << "Nhap loai co(Tu Nhien / Nhan Tao): "; 
-
     getline(cin, LoaiCo);
-    cout << "Nhap chieu dai san: "; 
-    getline(cin, ChieuDaiSan);
-    cout << "Nhap chieu rong san: "; 
-    getline(cin, ChieuRongSan);
-    cout << "Nhap loai bong: "; 
-    getline(cin, LoaiBong);
     cout << "Co luoi (Co / Khong): ";
     getline(cin, CoLuoi);
     if (CoLuoi != "Co" && CoLuoi != "Khong")

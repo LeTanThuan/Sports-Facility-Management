@@ -58,7 +58,8 @@ void QLyHeThongSanTheThao::input()
 
 // Destructor 
 QLyHeThongSanTheThao::~QLyHeThongSanTheThao() {
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         delete list[i];
     }
 }
@@ -66,7 +67,8 @@ QLyHeThongSanTheThao::~QLyHeThongSanTheThao() {
 //ham them san moi
 void QLyHeThongSanTheThao::themSan() {
     int choose=0;
-    if (n < 100) {
+    if (n < 100) 
+    {
         cout <<"\nBan muon them san gi";
         cout <<"\n1. San Bong Nam Nguoi";
         cout <<"\n3. San Cau Long";
@@ -106,18 +108,24 @@ void QLyHeThongSanTheThao::themSan() {
 }
 
 //ham hien thi danh sach san
-void QLyHeThongSanTheThao::hienthi_TatCaSan() {
+void QLyHeThongSanTheThao::hienthi_TatCaSan() 
+{
     cout <<"\nDanh sach tat ca cac san:\n";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         list[i]->output();
     }
 }
 
-void QLyHeThongSanTheThao::sapxep_TheoGio() {
-    for (int i = 0; i < n - 1; i++) {
+void QLyHeThongSanTheThao::sapxep_TheoGio() 
+{
+    for (int i = 0; i < n - 1; i++) 
+    {
         int minIndex = i;
-        for (int j = i + 1; j < n; j++) {
-            if (list[j]->getSoGioChoi() < list[minIndex]->getSoGioChoi()) {
+        for (int j = i + 1; j < n; j++) 
+        {
+            if (list[j]->getSoGioChoi() < list[minIndex]->getSoGioChoi()) 
+            {
                 minIndex = j;
             }
         }       
@@ -128,6 +136,7 @@ void QLyHeThongSanTheThao::sapxep_TheoGio() {
 
     cout <<"\nDanh sach san da duoc xap xep theo gio hoat dong!\n";
 }
+
 // ham sap xep theo tien
 void QLyHeThongSanTheThao::sapxep_TheoTien()
 {
@@ -148,7 +157,10 @@ void QLyHeThongSanTheThao::sapxep_TheoTien()
 
     cout <<"\nDanh sach san da duoc sap xep theo gia thue!\n";
 }
-float QLyHeThongSanTheThao::tinhKhuyenMai(float giaThue, int soGioChoi) {
+
+//ham tinh gia khuyen mai
+float QLyHeThongSanTheThao::tinhKhuyenMai(float giaThue, int soGioChoi) 
+{
     float giamGia = 0;
 
     if (soGioChoi >= 5) 
@@ -163,6 +175,7 @@ float QLyHeThongSanTheThao::tinhKhuyenMai(float giaThue, int soGioChoi) {
     }
     return giaThue - giamGia;
 }
+
 //ham tinh tong tien thu duoc
 float QLyHeThongSanTheThao::tinhTongTienThuDuoc() 
 {
@@ -176,6 +189,33 @@ float QLyHeThongSanTheThao::tinhTongTienThuDuoc()
     }
     return totalRevenue;
 }
+
+//ham hien thi san theo ma san
+void QLyHeThongSanTheThao::hienthi_SanTheoMaSan() 
+{
+    bool found = false;
+    string id;
+    cin.ignore();
+    cout<<"\nNhap ma san ban muon hien thi: ";
+    getline(cin,id);
+
+    for (int i = 0; i < n; i++) 
+    {
+        if (list[i]->getMaSan() == id) 
+        {
+            found = true;
+            cout << "San co ma san: " << id << " duoc tim thay:\n";
+            list[i]->output();
+            break;
+        }
+    }
+
+    if (!found) 
+    {
+        cout << "\nKhong tim thay san co ma san: " << id << "!\n";
+    }
+}
+
 //ham xoa san theo ma
 void QLyHeThongSanTheThao::xoasan_TheoMa() 
 {
@@ -206,6 +246,7 @@ void QLyHeThongSanTheThao::xoasan_TheoMa()
         cout <<"\nKhong tim thay san co  ID " << idToDelete << endl;
     }
 }
+
 //ham luu danh sach ra file
 void QLyHeThongSanTheThao::luu_DanhSachRaFile() 
 {
@@ -231,7 +272,6 @@ void QLyHeThongSanTheThao::luu_DanhSachRaFile()
     outFile.close();
     cout << "\nDanh sach san da duoc luu vao file DanhSachSan.txt`!\n";
 }
-
 
 //ham cap nhat gia thue theo id
 void QLyHeThongSanTheThao::capNhatGiaThue() 
@@ -347,13 +387,15 @@ void QLyHeThongSanTheThao::traCuuThoiGianHoatDong() {
     getline(cin, idSan);
     bool found = false;
     for (int i = 0; i < n; i++) {
-        if (list[i]->getMaSan() == idSan ) {
+        if (list[i]->getMaSan() == idSan ) 
+        {
             cout << "\nSan " << list[i]->getMaSan() << " mo cua tu "<< list[i]->getThoiGian_MoCua() << " den " << list[i]->getThoiGian_DongCua() << endl;
             found = true;
         }
     }
 
-    if (!found) {
+    if (!found) 
+    {
         cout << "\nKhong tim thay san voi ma san da nhap!" << idSan << endl;
     }
 }
