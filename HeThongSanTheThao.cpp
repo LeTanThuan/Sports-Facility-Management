@@ -58,22 +58,6 @@ string HeThongSanTheThao::getLoaiSan()
 {
     return loaiSan;
 }
-void HeThongSanTheThao::setDiaChi(string diaChi)
-{
-    diaChi=diaChi;
-}
-string HeThongSanTheThao::getDiaChi()
-{
-    return diaChi;
-}
-void HeThongSanTheThao::setDienTich(string dienTich)
-{
-    dienTich=dienTich;
-}
-string HeThongSanTheThao::getDienTich()
-{
-    return dienTich;
-}
 void HeThongSanTheThao::setTinhTrang(string tinhTrang)
 {
     tinhTrang=tinhTrang;
@@ -169,8 +153,6 @@ HeThongSanTheThao::HeThongSanTheThao()
     this->maSan = "Khong Xac Dinh";
     this->tenSan = "Khong Xac Dinh";
     this->loaiSan = "Khong Xac Dinh";
-    this->diaChi = "Khong Xac Dinh";
-    this->dienTich = "Khong Xac Dinh";
     this->tinhTrang = "Khong Xac Dinh";
     this->giathue_TheoGio = 0;
     this->soNguoiToiDa = -1;
@@ -186,15 +168,13 @@ HeThongSanTheThao::HeThongSanTheThao()
 }
 
 //contructor co tham so
-HeThongSanTheThao::HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, string dienTich, string tinhTrang,
+HeThongSanTheThao::HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string tinhTrang,
                                     float giathue_TheoGio, string thoigian_MoCua, string thoigian_DongCua,
                                     string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi, float GiaThue)
 {
     this->maSan = maSan;
     this->tenSan = tenSan;
     this->loaiSan = loaiSan;
-    this->diaChi = diaChi;
-    this->dienTich = dienTich;
     this->tinhTrang = tinhTrang;
     this->giathue_TheoGio = giathue_TheoGio;
     this->thoigian_MoCua = thoigian_MoCua;
@@ -213,9 +193,6 @@ void HeThongSanTheThao::input()
     cin.ignore();
     cout<<"Nhap ten san: ";
     getline(cin,tenSan);
-    cout<<"Nhap dia chi: ";
-    getline(cin,diaChi);
-    //cout<<"Nhap dien tich: ";getline(cin,dienTich);
     cout<<"Nhap tinh trang san: ";
     getline(cin,tinhTrang);
     cout<<"Nhap gia thue(Theo Gio): ";
@@ -251,8 +228,6 @@ void HeThongSanTheThao::output()
     cout<<"Ma san: "<<maSan<<endl;
     cout<<"Ten san: "<<tenSan<<endl;
     cout<<"Loai san: "<<loaiSan<<endl;
-    cout<<"Dia chi: "<<diaChi<<endl;
-    cout<<"Dien tich: "<<dienTich<<endl;
     cout<<"Tinh trang san: "<<tinhTrang<<endl;
     cout<<"Gia thue(theo gio): "<<giathue_TheoGio<<endl;
     cout<<"So nguoi toi da: "<<soNguoiToiDa<<endl;

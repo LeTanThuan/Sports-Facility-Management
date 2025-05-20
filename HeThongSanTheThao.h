@@ -10,8 +10,6 @@ protected:
     string maSan;
     string tenSan;
     string loaiSan;
-    string diaChi;
-    string dienTich;
     string tinhTrang;
     float  giathue_TheoGio; 
     int soNguoiToiDa;
@@ -35,7 +33,7 @@ public:
 HeThongSanTheThao();
 
 //contructor
-HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string diaChi, string dienTich, string tinhTrang,
+HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string tinhTrang,
                 float giathue_TheoGio, string thoigian_MoCua, string thoigian_DongCua,
                 string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi,float GiaThue);
 
@@ -47,10 +45,6 @@ void setTenSan(string tenSan);
 string getTenSan();
 void setLoaiSan(string loaiSan);
 string getLoaiSan();
-void setDiaChi(string maSan);
-string getDiaChi();
-void setDienTich(string dienTich);
-string getDienTich();
 void setTinhTrang(string tinhTrang);
 string getTinhTrang();
 void setMaSan(float giathue_TheoGio);

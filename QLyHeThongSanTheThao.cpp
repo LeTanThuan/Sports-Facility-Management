@@ -12,7 +12,7 @@ QLyHeThongSanTheThao::QLyHeThongSanTheThao(int n)
 {
     n = 0;
 }
-
+//ham nhap
 void QLyHeThongSanTheThao::input()
 {
     choose = 0;
@@ -63,7 +63,7 @@ QLyHeThongSanTheThao::~QLyHeThongSanTheThao() {
     }
 }
 
-// Thêm sân mới
+//ham them san moi
 void QLyHeThongSanTheThao::themSan() {
     int choose=0;
     if (n < 100) {
@@ -105,7 +105,7 @@ void QLyHeThongSanTheThao::themSan() {
     }
 }
 
-// Hiển thị danh sách sân
+//ham hien thi danh sach san
 void QLyHeThongSanTheThao::hienthi_TatCaSan() {
     cout <<"\nDanh sach tat ca cac san:\n";
     for (int i = 0; i < n; i++) {
@@ -128,7 +128,7 @@ void QLyHeThongSanTheThao::sapxep_TheoGio() {
 
     cout <<"\nDanh sach san da duoc xap xep theo gio hoat dong!\n";
 }
-
+// ham sap xep theo tien
 void QLyHeThongSanTheThao::sapxep_TheoTien()
 {
     for (int i = 0; i < n - 1; i++) 
@@ -148,6 +148,22 @@ void QLyHeThongSanTheThao::sapxep_TheoTien()
 
     cout <<"\nDanh sach san da duoc sap xep theo gia thue!\n";
 }
+float QLyHeThongSanTheThao::tinhKhuyenMai(float giaThue, int soGioChoi) {
+    float giamGia = 0;
+
+    if (soGioChoi >= 5) 
+    {
+        giamGia = giaThue * 0.1; //giam 10%
+    } else if (soGioChoi >= 10) 
+    {
+        giamGia = giaThue * 0.2; //giam 20%
+    }else
+    {
+        giamGia=0;
+    }
+    return giaThue - giamGia;
+}
+//ham tinh tong tien thu duoc
 float QLyHeThongSanTheThao::tinhTongTienThuDuoc() 
 {
     float totalRevenue = 0;
@@ -155,7 +171,7 @@ float QLyHeThongSanTheThao::tinhTongTienThuDuoc()
     {
         if (list[i] != nullptr)
         { 
-            totalRevenue += list[i]->getGiaThue() * list[i]->getSoGioChoi();
+            totalRevenue += list[i]->getSoGioChoi() * (list[i]->getGiaThue(), list[i]->getSoGioChoi());
         }
     }
     return totalRevenue;
@@ -217,7 +233,7 @@ void QLyHeThongSanTheThao::luu_DanhSachRaFile()
 }
 
 
-// Cập nhật giá thuê sân theo ID
+//ham cap nhat gia thue theo id
 void QLyHeThongSanTheThao::capNhatGiaThue() 
 {
     string id;
@@ -238,7 +254,7 @@ void QLyHeThongSanTheThao::capNhatGiaThue()
     cout <<"Khong tim thay san ID " << id << endl;
 }
 
-// Hiển thị danh sách sân theo loại (Bóng đá, cầu lông...)
+//ham hien thi danh sach san theo loai
 void QLyHeThongSanTheThao::hienThiTheoLoai() 
 {
     string loai;
@@ -255,7 +271,7 @@ void QLyHeThongSanTheThao::hienThiTheoLoai()
     }
 }
 
-// Đếm số lượng sân theo loại (Bóng đá, cầu lông, pickleball...)
+//ham dem so luong san theo loai
 int QLyHeThongSanTheThao::demSoSanTheoLoai(string loai) 
 {
     int count = 0;
@@ -269,7 +285,7 @@ int QLyHeThongSanTheThao::demSoSanTheoLoai(string loai)
     return count;
 }
 
-// Thống kê số lượng sân theo từng loại
+//ham thong ke so luong san theo loai
 void QLyHeThongSanTheThao::thongke_SoLuongTheoLoai() 
 {
     cout << "\nThong ke so luong san theo tung loai:\n";
@@ -279,7 +295,7 @@ void QLyHeThongSanTheThao::thongke_SoLuongTheoLoai()
     cout << "San PickleBall: " << demSoSanTheoLoai("SanPickleBall") << " san\n";
 }
 
-// Thống kê doanh thu theo loại sân
+//ham thong ke doanh thu theo loai san
 void QLyHeThongSanTheThao::thongke_DoanhThuTheoLoai() 
 {
     float doanhThuBong5 = 0, doanhThuBong7 = 0, doanhThuCauLong = 0, doanhthuPickleBall = 0;
@@ -308,7 +324,7 @@ void QLyHeThongSanTheThao::thongke_DoanhThuTheoLoai()
     cout << "Doanh thu PickleBall: " << doanhthuPickleBall << "K\n";
 }
 
-// Thống kê sân theo khoảng giá
+//thong ke theo khoang gia
 void QLyHeThongSanTheThao::thongke_TheoKhoangGia() 
 {
     float min, max;
@@ -323,7 +339,7 @@ void QLyHeThongSanTheThao::thongke_TheoKhoangGia()
         }
     }
 }
-//Tra Cuu Thoi Gian Hoat Dong
+//tra cuu thoi gian hoat dong
 void QLyHeThongSanTheThao::traCuuThoiGianHoatDong() {
     string idSan;
     cin.ignore();

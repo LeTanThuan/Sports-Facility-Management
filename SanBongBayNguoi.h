@@ -16,7 +16,7 @@ class SanBongBayNguoi:public HeThongSanTheThao
         string SoLuongPhatGoc;
         string CoHeThongTuoiNuoc;
         string CameraGiamSat;
-        string CoPhongNghi;
+        string CoGheNgoi;
         string LichThiDau;
         string CoWifi;
         string SoLuongTrongTai;
@@ -27,7 +27,7 @@ class SanBongBayNguoi:public HeThongSanTheThao
 
     SanBongBayNguoi(string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong, string CoLuoi,
                     string CoHangRao, string SoLuongPhatGoc, string CoHeThongTuoiNuoc, string CameraGiamSat,
-                    string CoPhongNghi, string LichThiDau, string CoWifi, string SoLuongTrongTai, string CoHeThongAmThanh, string MucDoBaoTri);
+                    string CoGheNgoi, string LichThiDau, string CoWifi, string SoLuongTrongTai, string CoHeThongAmThanh, string MucDoBaoTri);
     
     void setLOAICO(string LoaiCo);
     string getLOAICO();
@@ -56,8 +56,8 @@ class SanBongBayNguoi:public HeThongSanTheThao
     void setCAMERAGIAMSAT(string CameraGiamSat);
     string getCAMERAGIAMSAT();
 
-    void setCOPHONGNGHI(string CoPhongNghi);
-    string getCOPHONGNGHI();
+    void setCOGHENGOI(string CoGheNgoi);
+    string getCOGHENGOI();
 
     void setLICHTHIDAU(string LichThiDau);
     string getLICHTHIDAU();

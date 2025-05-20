@@ -75,13 +75,13 @@ string SanBongBayNguoi :: getCAMERAGIAMSAT()
 {
     return CameraGiamSat;
 }
-void SanBongBayNguoi :: setCOPHONGNGHI(string CoPhongNghi)
+void SanBongBayNguoi :: setCOGHENGOI(string CoGheNgoi)
 {
-    this->CoPhongNghi = CoPhongNghi;
+    this->CoGheNgoi = CoGheNgoi;
 }
-string SanBongBayNguoi :: getCOPHONGNGHI()
+string SanBongBayNguoi :: getCOGHENGOI()
 {
-    return CoPhongNghi;
+    return CoGheNgoi;
 }
 void SanBongBayNguoi :: setLICHTHIDAU(string LichThiDau)
 {
@@ -141,7 +141,7 @@ SanBongBayNguoi::SanBongBayNguoi()
     this->SoLuongPhatGoc = "Khong Xac Dinh";
     this->CoHeThongTuoiNuoc = "0";
     this->CameraGiamSat = "Khong Xac Dinh";
-    this->CoPhongNghi = "Khong Xac Dinh";
+    this->CoGheNgoi = "Khong Xac Dinh";
     this->LichThiDau = "Khong Xac Dinh";
     this->CoWifi = "Chua co";
     this->SoLuongTrongTai = "Khong Xac Dinh";
@@ -152,7 +152,7 @@ SanBongBayNguoi::SanBongBayNguoi()
 SanBongBayNguoi::SanBongBayNguoi(
                     string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong,
                     string CoLuoi, string coHangRao, string soLuongPhatGoc,
-                    string CoHeThongTuoiNuoc, string cameraGiamSat, string CoPhongNghi,
+                    string CoHeThongTuoiNuoc, string cameraGiamSat, string CoGheNgoi,
                     string LichThiDau, string CoWifi, string SoLuongTrongTai,
                     string CoHeThongAmThanh, string MucDoBaoTri) 
 {
@@ -165,7 +165,7 @@ SanBongBayNguoi::SanBongBayNguoi(
     this->SoLuongPhatGoc = SoLuongPhatGoc;
     this->CoHeThongTuoiNuoc = CoHeThongTuoiNuoc;
     this->CameraGiamSat = CameraGiamSat;
-    this->CoPhongNghi = CoPhongNghi;
+    this->CoGheNgoi = CoGheNgoi;
     this->LichThiDau = LichThiDau;
     this->CoWifi = CoWifi;
     this->SoLuongTrongTai = SoLuongTrongTai;
@@ -216,10 +216,10 @@ void SanBongBayNguoi::input()
         CameraGiamSat = "Khong";
     }
     cout << "Phong nghi (Co / Khong): "; 
-    getline(cin, CoPhongNghi);
-    if (CoPhongNghi != "Co" && CoPhongNghi != "Khong")
+    getline(cin, CoGheNgoi);
+    if (CoGheNgoi != "Co" && CoGheNgoi != "Khong")
     {
-        CoPhongNghi = "Khong";
+        CoGheNgoi = "Khong";
     }
     cout << "Lich thi dau: "; 
     getline(cin, LichThiDau);
@@ -258,7 +258,7 @@ void SanBongBayNguoi::output()
     cout << "So goc phat bong: " << SoLuongPhatGoc << endl;
     cout << "He thong tuoi nuoc: " << CoHeThongTuoiNuoc << endl;
     cout << "Camera giam sat: " << CameraGiamSat << endl;
-    cout << "Phong nghi: " << CoPhongNghi << endl;
+    cout << "Ghe Ngoi: " << CoGheNgoi << endl;
     cout << "Lich thi dau: " << LichThiDau << endl;
     cout << "Wifi: " << CoWifi << endl;
     cout << "So trong tai: " << SoLuongTrongTai << endl;

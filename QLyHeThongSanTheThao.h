@@ -31,24 +31,25 @@ class QLyHeThongSanTheThao
     void sapxep_TheoGio();
     //ham sap xep san theo gia tien
     void sapxep_TheoTien();
+    //ham khuyen mai
+    float tinhKhuyenMai(float giaThue, int soGioChoi);
     //ham tinh tong tien thu duoc
     float tinhTongTienThuDuoc();
     //ham xoa san theo ma
     void xoasan_TheoMa();
-    //void capnhat_GiaThue();
     //ham luu danh sach ra file
     void luu_DanhSachRaFile();
-    // Cập nhật giá thuê sân theo ID
+    //ham cap nhat gia thue theo id
     void capNhatGiaThue();
-    // Hiển thị danh sách sân theo loại (Bóng đá, cầu lông...)
+    //ham hien thi danh sach san theo loai
     void hienThiTheoLoai();
-    // Đếm số lượng sân theo loại (Bóng đá, cầu lông, pickleball...)
+    //ham dem so luong san theo loai
     int demSoSanTheoLoai(string loai);
-    // Thống kê số lượng sân theo từng loại
+    //ham thong ke so luong san theo loai
     void thongke_SoLuongTheoLoai();
-    // Thống kê doanh thu theo loại sân
+    //ham thong ke doanh thu theo loai san
     void thongke_DoanhThuTheoLoai();
-    // Thống kê sân theo khoảng giá
+    //thong ke theo khoang gia
     void thongke_TheoKhoangGia();
     //Tra Cuu Thoi Gian Hoat Dong
     void traCuuThoiGianHoatDong();
