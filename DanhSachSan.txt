@@ -1,1 +1,2 @@
 SBBN1 Thuan SanBongBayNguoi 7 60 420
+SBBN2 Thuann SanBongBayNguoi 2 60 

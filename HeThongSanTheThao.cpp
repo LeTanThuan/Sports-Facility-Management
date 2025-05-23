@@ -147,7 +147,7 @@ float HeThongSanTheThao::getGiaThue()
     return GiaThue;
 }
 
-//contructor khong tham so
+//constructor without parameters
 HeThongSanTheThao::HeThongSanTheThao() 
 {
     this->maSan = "Khong Xac Dinh";
@@ -167,7 +167,7 @@ HeThongSanTheThao::HeThongSanTheThao()
     this->GiaThue = 0;
 }
 
-//contructor co tham so
+//constructor with parameters
 HeThongSanTheThao::HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string tinhTrang,
                                     float giathue_TheoGio, string thoigian_MoCua, string thoigian_DongCua,
                                     string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi, float GiaThue)
@@ -187,7 +187,7 @@ HeThongSanTheThao::HeThongSanTheThao(string maSan, string tenSan, string loaiSan
     this->SoGioChoi = SoGioChoi;
     this->GiaThue = GiaThue;
 }
-//ham input
+// input function 
 void HeThongSanTheThao::input() 
 {  
     cin.ignore();
@@ -220,7 +220,7 @@ void HeThongSanTheThao::input()
     cin>>SoGioChoi;
     setGiaThue();
 }
-//ham output
+// output function
 void HeThongSanTheThao::output()
 {
     cout<<"Ma san: "<<maSan<<endl;
@@ -239,9 +239,8 @@ void HeThongSanTheThao::output()
     cout<<"Gia thue: "<<GiaThue<<endl;
 }
 
+// destructor function
 HeThongSanTheThao:: ~HeThongSanTheThao()
 {
     
 }
-
-

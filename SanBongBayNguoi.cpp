@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-//getter setter
+//getter setter function
 void SanBongBayNguoi:: setLOAICO(string LoaiCo)
 {
     this->LoaiCo = LoaiCo;
@@ -124,7 +124,7 @@ string SanBongBayNguoi::getMUCDOBAOTRI()
     return MucDoBaoTri;
 }
 
-// contructor khong tham so
+//constructor without parameters
 SanBongBayNguoi::SanBongBayNguoi()
 {
     
@@ -148,7 +148,7 @@ SanBongBayNguoi::SanBongBayNguoi()
     this->CoHeThongAmThanh = "Khong Xac Dinh";
     this->MucDoBaoTri = "Khong Xac Dinh";  
 }
-//contructor co tham so
+//constructor with parameters
 SanBongBayNguoi::SanBongBayNguoi(
                     string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong,
                     string CoLuoi, string coHangRao, string soLuongPhatGoc,
@@ -172,7 +172,7 @@ SanBongBayNguoi::SanBongBayNguoi(
     this->CoHeThongAmThanh = CoHeThongAmThanh;
     this->MucDoBaoTri = MucDoBaoTri;
 }
-//ham input
+// input function
 void SanBongBayNguoi::input() 
 {
     cout << "\n--- THONG TIN SAN BONG BAY NGUOI ---\n";
@@ -237,7 +237,7 @@ void SanBongBayNguoi::input()
         MucDoBaoTri = "Khong xac dinh";
     }
 }
-//ham output
+// output function
 void SanBongBayNguoi::output() 
 {
     cout << "\n--- THONG TIN SAN BONG BAY NGUOI---\n";
@@ -257,4 +257,8 @@ void SanBongBayNguoi::output()
     cout << "So trong tai: " << SoLuongTrongTai << endl;
     cout << "He thong am thanh: " << CoHeThongAmThanh << endl;
     cout << "Muc do bao tri: " << MucDoBaoTri << endl;   
+}
+// destructor function
+SanBongBayNguoi::~SanBongBayNguoi() {
+    cout << "Destructor of SanBongBayNguoi is called!" << endl;
 }

@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-//getter setter
+// getter  setter function
 void SanBongNamNguoi:: setLOAICO(string LoaiCo)
 {
     this->LoaiCo = LoaiCo;
@@ -123,7 +123,7 @@ string SanBongNamNguoi::getMUCDOBAOTRI()
 {
     return MucDoBaoTri;
 }
-//contructor khong tham so
+//constructor without parameters
 SanBongNamNguoi::SanBongNamNguoi()
 {
     this->loaiSan = "SanBongNamNguoi";
@@ -147,7 +147,7 @@ SanBongNamNguoi::SanBongNamNguoi()
     this->MucDoBaoTri = "khong";  
 }
 
-//contructor co tham so
+//constructor with parameters
 SanBongNamNguoi::SanBongNamNguoi(
                     string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong,
                     string CoLuoi, string coHangRao, string soLuongPhatGoc,
@@ -156,7 +156,7 @@ SanBongNamNguoi::SanBongNamNguoi(
                     string CoHeThongAmThanh, string MucDoBaoTri) 
 {
     this->LoaiCo = LoaiCo;
-    this->ChieuDaiSan = ChieuDaiSan;
+    this->ChieuDaiSan = ChieuDaiSan;    
     this->ChieuRongSan = ChieuRongSan;
     this->LoaiBong = LoaiBong;
     this->CoLuoi = CoLuoi;
@@ -171,7 +171,7 @@ SanBongNamNguoi::SanBongNamNguoi(
     this->CoHeThongAmThanh = CoHeThongAmThanh;
     this->MucDoBaoTri = MucDoBaoTri;
 }
-//ham input
+// input function
 void SanBongNamNguoi::input() 
 {
     cout << "\n--- THONG TIN SAN BONG NAM NGUOI ---\n";
@@ -241,7 +241,7 @@ void SanBongNamNguoi::input()
     }
 }
 
-//ham output
+//output function
 void SanBongNamNguoi::output() 
 {
     cout << "\n--- THONG TIN SAN BONG NAM NGUOI---\n";
@@ -261,4 +261,8 @@ void SanBongNamNguoi::output()
     cout << "So trong tai: " << SoLuongTrongTai << endl;
     cout << "He thong am thanh: " << CoHeThongAmThanh << endl;
     cout << "Muc do bao tri: " << MucDoBaoTri << endl;   
+}
+//destructor function
+SanBongNamNguoi::~SanBongNamNguoi() {
+    cout << "Destructor of SanBongNamNguoi is called!" << endl;
 }

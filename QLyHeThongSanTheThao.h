@@ -18,42 +18,44 @@ class QLyHeThongSanTheThao
     int choose;
 
     public:
+    // destructor function
     ~QLyHeThongSanTheThao();
+    // constructor without parameters
     QLyHeThongSanTheThao();
+    // constructor with parameters
     QLyHeThongSanTheThao(int n);
-    //ham input
+    // input function
     void input();
-    //ham them san moi
+    // add a new field
     void themSan();
-    //ham hien thi tat ca cac san
+    // function to display all courts
     void hienthi_TatCaSan();
-    //ham sap xep san theo gio
+    // function to sort the field by time
     void sapxep_TheoGio();
-    //ham sap xep san theo gia tien
+    // function to sort the field by price
     void sapxep_TheoTien();
-    //ham khuyen mai
+    // promotion function
     float tinhKhuyenMai(float giaThue, int soGioChoi);
-    //ham tinh tong tien thu duoc
+    // function to calculate the total revenue received
     float tinhTongTienThuDuoc();
-    //ham hien thi san theo ma san
+    // function to display the field by field code
     void hienthi_SanTheoMaSan();
-    //ham xoa san theo ma
+    // function to delete stadium by code
     void xoasan_TheoMa();
-    //ham luu danh sach ra file
+    // function to save the list to a file
     void luu_DanhSachRaFile();
-    //ham cap nhat gia thue theo id
+    // function to update rental price by id
     void capNhatGiaThue();
-    //ham hien thi danh sach san theo loai
+    // function to display the list of courts by type
     void hienThiTheoLoai();
-    //ham dem so luong san theo loai
+    // function to count the number of courts by type
     int demSoSanTheoLoai(string loai);
-    //ham thong ke so luong san theo loai
     void thongke_SoLuongTheoLoai();
-    //ham thong ke doanh thu theo loai san
+    // revenue statistics function by type of court
     void thongke_DoanhThuTheoLoai();
-    //thong ke theo khoang gia
+    // statistical function by price range
     void thongke_TheoKhoangGia();
-    //Tra Cuu Thoi Gian Hoat Dong
+    // function to lookup active time
     void traCuuThoiGianHoatDong();
 
 };

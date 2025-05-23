@@ -24,17 +24,17 @@ private:
     string donvi_QuanLy;
 public:
 
-//contructor
+//constructor without parameters
 SanPickleBall();
 
-//contructor
+//constructor with parameters
 SanPickleBall(
             string soluongCotLuoi, string docaoCuaLuoi, string matSan, string mucChongTham,
             string coThamTruot, string soLuongVot, string soLuongBong,string coPhongKhoiDong,
             string loaivotPhuHop, string coPhongNghi, string soluong_NguoiToiDa, string lichsu_SuDung,
             string mucdo_HuHong,string donvi_QuanLy);
 
-//getter va setter
+//getter and setter function
 void setSoLuongCotLuoi(string soluongCotLuoi);
 string getSoLuongCotLuoi();
 void setDoCaoCuaLuoi(string docaoCuaLuoi);
@@ -64,10 +64,12 @@ string getMucDo_HuHong();
 void setDonVi_QuanLy(string donvi_QuanLy);
 string getDonVi_QuanLy();
 
+//input override function
 virtual void  input()override;
-
+//output override function
 virtual void output() override;
-    
+//destructor function
+virtual ~ SanPickleBall();
 };
 
 #endif

@@ -24,17 +24,17 @@ private:
     string donvi_QuanLy;
 public:
 
-//contructor
+//constructor without parameters
 SanCauLong();
 
-//contructor
+//constructor with parameters
 SanCauLong(
             string soluongCotLuoi, string docaoCuaLuoi, string matSan, string mucChongTham,
             string coThamTruot, string soLuongVot, string soLuongCau,string coPhongKhoiDong,
             string loaivotPhuHop, string coPhongNghi, string soluong_NguoiToiDa, string lichsu_SuDung,
             string mucdo_HuHong,string donvi_QuanLy);
 
-
+//getter and setter function
 void setSoLuongCotLuoi(string soluongCotLuoi);
 string getSoLuongCotLuoi();
 void setDoCaoCuaLuoi(string docaoCuaLuoi);
@@ -63,11 +63,13 @@ void setMucDo_HuHong(string mucdo_HuHong);
 string getMucDo_HuHong();
 void setDonVi_QuanLy(string donvi_QuanLy);
 string getDonVi_QuanLy();
-
+//input override function
 virtual void  input() override;
-
+//output override function
 virtual void output()override;
-    
+
+//destructor function
+virtual ~SanCauLong();
 };
 
 #endif

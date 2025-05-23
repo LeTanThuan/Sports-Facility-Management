@@ -5,11 +5,11 @@
 #include "SanCauLong.h"
 #include "SanPickleBall.h"
 using namespace std;
+// Main function
 int main()
 {
     QLyHeThongSanTheThao quanLySan;
-    int luaChon;
-    
+    int choose;
     do {
         cout <<"\n===== MENU QUAN LY SAN =====";
         cout <<"\n1. Nhap danh sach san";
@@ -29,9 +29,9 @@ int main()
         cout <<"\n15. Tra cuu thoi gian hoat dong cua tung san";
         cout <<"\n16. Thoat";
         cout <<"\nNhap lua chon cua ban: ";
-        cin >> luaChon;
+        cin >> choose;
 
-        switch (luaChon) {
+        switch (choose) {
             case 1:
                 quanLySan.input();
                 break;
@@ -64,7 +64,6 @@ int main()
             case 11:
                 quanLySan.hienThiTheoLoai();
                 break;
-
             case 12:
                 quanLySan.thongke_DoanhThuTheoLoai();
                 break;
@@ -82,6 +81,6 @@ int main()
             default:
                 cout <<"Lua chon khong hop le, vui long chon lai!";
         }
-    } while (luaChon != 16);
+    } while (choose != 16);
     return 0;
 }

@@ -29,16 +29,15 @@ protected:
     static int counter_SPB; 
 
 public:
-//contructor
+//constructor without parameters
 HeThongSanTheThao();
 
-//contructor
+//constructor with parameters
 HeThongSanTheThao(string maSan, string tenSan, string loaiSan, string tinhTrang,
                 float giathue_TheoGio, string thoigian_MoCua, string thoigian_DongCua,
                 string coPhongThayDo, string coHeThongDen, string coBaoHiem, string nguoiQuanLy, string sodienthoai_LienHe, float SoGioChoi,float GiaThue);
 
-//set va get
-
+//setter and getter
 void setMaSan(string masan);
 string getMaSan();
 void setTenSan(string tenSan);

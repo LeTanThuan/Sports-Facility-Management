@@ -1,7 +1,7 @@
 #include "SanPickleBall.h"
 #include <iostream>
 using namespace std;
-//ham set va get
+//setter and getter function
 void SanPickleBall :: setSoLuongCotLuoi(string soluongCotLuoi)
 {
     this->soluongCotLuoi=soluongCotLuoi;
@@ -114,7 +114,7 @@ string SanPickleBall::getDonVi_QuanLy()
 {
     return this->donvi_QuanLy;
 }
-//contructor khong tham so
+//constructor without parameters
 SanPickleBall::SanPickleBall()
 {
     this->loaiSan = "SanPickleBall";
@@ -136,7 +136,7 @@ SanPickleBall::SanPickleBall()
     this->mucdo_HuHong = "Khong Xac Dinh";
     this->donvi_QuanLy = "Khong Xac Dinh";
 }
-//contructor co tham so
+//constructor with parameters
 SanPickleBall::SanPickleBall(
             string soluongCotLuoi, string docaoCuaLuoi, string matSan, string mucChongTham,
             string coThamTruot, string soLuongVot, string soLuongBong,string coPhongKhoiDong,
@@ -159,7 +159,7 @@ SanPickleBall::SanPickleBall(
     this->mucdo_HuHong = mucdo_HuHong;
     this->donvi_QuanLy = donvi_QuanLy;
 }
-//ham input   
+//input function
 void SanPickleBall::input()
 {
     cout << "\n--- THONG TIN SAN PICKLEBALL---\n";
@@ -205,7 +205,7 @@ void SanPickleBall::input()
     getline(cin,donvi_QuanLy);
 
 }
-//ham output
+//output function
 void SanPickleBall::output()
 {
     cout<<"\n------THONG TIN SAN PICKLEBALL------\n";
@@ -222,6 +222,10 @@ void SanPickleBall::output()
     cout<<"Lich su su dung: "<< lichsu_SuDung << endl;
     cout<<"Muc do hu hong: "<< mucdo_HuHong << endl;
     cout<<"Don vi quan ly: "<< donvi_QuanLy << endl;   
+}
+//destructor
+SanPickleBall::~SanPickleBall() {
+    cout << "Destructor of SanPickleBall is called!" << endl;
 }
 
 

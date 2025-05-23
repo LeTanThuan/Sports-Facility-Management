@@ -2,20 +2,21 @@
 #include <fstream>
 
 using namespace std;
-
+//constructor without parameters
 QLyHeThongSanTheThao::QLyHeThongSanTheThao()
 {
     this->n = 0;
 }
-
+//constructor with parameters
 QLyHeThongSanTheThao::QLyHeThongSanTheThao(int n) 
 {
     n = 0;
 }
-//ham nhap
+// input function
 void QLyHeThongSanTheThao::input()
 {
     choose = 0;
+    //Polymorphism
     while(1)
     {
         cout <<"\nBan Muon Dat San Gi!";
@@ -56,7 +57,7 @@ void QLyHeThongSanTheThao::input()
 }
 
 
-// Destructor 
+// Destructor function
 QLyHeThongSanTheThao::~QLyHeThongSanTheThao() {
     for (int i = 0; i < n; i++) 
     {
@@ -64,13 +65,15 @@ QLyHeThongSanTheThao::~QLyHeThongSanTheThao() {
     }
 }
 
-//ham them san moi
+// add a new field
 void QLyHeThongSanTheThao::themSan() {
     int choose=0;
+    //Polymorphism
     if (n < 100) 
     {
         cout <<"\nBan muon them san gi";
-        cout <<"\n1. San Bong Nam Nguoi";
+        cout <<"\n1. San Bong Bay Nguoi";
+        cout <<"\n2. San Bong Nam Nguoi";
         cout <<"\n3. San Cau Long";
         cout <<"\n4. San PickleBall";
         cout <<"\n5. De huy khong them san!";
@@ -107,7 +110,7 @@ void QLyHeThongSanTheThao::themSan() {
     }
 }
 
-//ham hien thi danh sach san
+//function to display all courts
 void QLyHeThongSanTheThao::hienthi_TatCaSan() 
 {
     cout <<"\nDanh sach tat ca cac san:\n";
@@ -117,6 +120,7 @@ void QLyHeThongSanTheThao::hienthi_TatCaSan()
     }
 }
 
+//function to sort the field by time
 void QLyHeThongSanTheThao::sapxep_TheoGio() 
 {
     for (int i = 0; i < n - 1; i++) 
@@ -137,7 +141,7 @@ void QLyHeThongSanTheThao::sapxep_TheoGio()
     cout <<"\nDanh sach san da duoc xap xep theo gio hoat dong!\n";
 }
 
-// ham sap xep theo tien
+// function to sort the field by price
 void QLyHeThongSanTheThao::sapxep_TheoTien()
 {
     for (int i = 0; i < n - 1; i++) 
@@ -158,17 +162,17 @@ void QLyHeThongSanTheThao::sapxep_TheoTien()
     cout <<"\nDanh sach san da duoc sap xep theo gia thue!\n";
 }
 
-//ham tinh gia khuyen mai
+//promotion function
 float QLyHeThongSanTheThao::tinhKhuyenMai(float giaThue, int soGioChoi) 
 {
     float giamGia = 0;
 
     if (soGioChoi >= 5) 
     {
-        giamGia = giaThue * 0.1; //giam 10%
+        giamGia = giaThue * 0.1; //10% discount
     } else if (soGioChoi >= 10) 
     {
-        giamGia = giaThue * 0.2; //giam 20%
+        giamGia = giaThue * 0.2; //20% discount
     }else
     {
         giamGia=0;
@@ -176,7 +180,7 @@ float QLyHeThongSanTheThao::tinhKhuyenMai(float giaThue, int soGioChoi)
     return giaThue - giamGia;
 }
 
-//ham tinh tong tien thu duoc
+//function to calculate the total revenue received
 float QLyHeThongSanTheThao::tinhTongTienThuDuoc() 
 {
     float totalRevenue = 0;
@@ -190,7 +194,7 @@ float QLyHeThongSanTheThao::tinhTongTienThuDuoc()
     return totalRevenue;
 }
 
-//ham hien thi san theo ma san
+//function to display the field by field code
 void QLyHeThongSanTheThao::hienthi_SanTheoMaSan() 
 {
     bool found = false;
@@ -216,7 +220,7 @@ void QLyHeThongSanTheThao::hienthi_SanTheoMaSan()
     }
 }
 
-//ham xoa san theo ma
+//function to delete stadium by code
 void QLyHeThongSanTheThao::xoasan_TheoMa() 
 {
     string idToDelete;
@@ -247,7 +251,7 @@ void QLyHeThongSanTheThao::xoasan_TheoMa()
     }
 }
 
-//ham luu danh sach ra file
+//function to save the list to a file
 void QLyHeThongSanTheThao::luu_DanhSachRaFile() 
 {
     ofstream outFile("DanhSachSan.txt");
@@ -266,14 +270,13 @@ void QLyHeThongSanTheThao::luu_DanhSachRaFile()
                 << list[i]->getSoGioChoi() << " "
                 << list[i]->getGiaThue_TheoGio()<<" "
                 << list[i]->getGiaThue() << endl;
-
     }
 
     outFile.close();
     cout << "\nDanh sach san da duoc luu vao file DanhSachSan.txt`!\n";
 }
 
-//ham cap nhat gia thue theo id
+// function to update rental price by id
 void QLyHeThongSanTheThao::capNhatGiaThue() 
 {
     string id;
@@ -294,7 +297,7 @@ void QLyHeThongSanTheThao::capNhatGiaThue()
     cout <<"Khong tim thay san ID " << id << endl;
 }
 
-//ham hien thi danh sach san theo loai
+// function to display the list of courts by type
 void QLyHeThongSanTheThao::hienThiTheoLoai() 
 {
     string loai;
@@ -311,7 +314,7 @@ void QLyHeThongSanTheThao::hienThiTheoLoai()
     }
 }
 
-//ham dem so luong san theo loai
+//function to count the number of courts by type
 int QLyHeThongSanTheThao::demSoSanTheoLoai(string loai) 
 {
     int count = 0;
@@ -325,7 +328,7 @@ int QLyHeThongSanTheThao::demSoSanTheoLoai(string loai)
     return count;
 }
 
-//ham thong ke so luong san theo loai
+//function to count the number of courts by type
 void QLyHeThongSanTheThao::thongke_SoLuongTheoLoai() 
 {
     cout << "\nThong ke so luong san theo tung loai:\n";
@@ -335,7 +338,7 @@ void QLyHeThongSanTheThao::thongke_SoLuongTheoLoai()
     cout << "San PickleBall: " << demSoSanTheoLoai("SanPickleBall") << " san\n";
 }
 
-//ham thong ke doanh thu theo loai san
+// revenue statistics function by type of court
 void QLyHeThongSanTheThao::thongke_DoanhThuTheoLoai() 
 {
     float doanhThuBong5 = 0, doanhThuBong7 = 0, doanhThuCauLong = 0, doanhthuPickleBall = 0;
@@ -364,7 +367,7 @@ void QLyHeThongSanTheThao::thongke_DoanhThuTheoLoai()
     cout << "Doanh thu PickleBall: " << doanhthuPickleBall << "K\n";
 }
 
-//thong ke theo khoang gia
+//statistical function by price range
 void QLyHeThongSanTheThao::thongke_TheoKhoangGia() 
 {
     float min, max;
@@ -379,7 +382,7 @@ void QLyHeThongSanTheThao::thongke_TheoKhoangGia()
         }
     }
 }
-//tra cuu thoi gian hoat dong
+//function to lookup active time
 void QLyHeThongSanTheThao::traCuuThoiGianHoatDong() {
     string idSan;
     cin.ignore();

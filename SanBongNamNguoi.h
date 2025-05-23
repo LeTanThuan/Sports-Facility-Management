@@ -23,12 +23,14 @@ class SanBongNamNguoi : public HeThongSanTheThao
         string CoHeThongAmThanh;
         string MucDoBaoTri;
     public:
+    //constructor without parameters
     SanBongNamNguoi();
-
+    //constructor with parameters
     SanBongNamNguoi(string LoaiCo, string ChieuDaiSan, string ChieuRongSan, string LoaiBong, string CoLuoi,
                     string CoHangRao, string SoLuongPhatGoc, string CoHeThongTuoiNuoc, string CameraGiamSat,
                     string CoPhongNghi, string LichThiDau, string CoWifi, string SoLuongTrongTai, string CoHeThongAmThanh, string MucDoBaoTri);
     
+    //setter and getter function                
     void setLOAICO(string LoaiCo);
     string getLOAICO();
 
@@ -73,9 +75,12 @@ class SanBongNamNguoi : public HeThongSanTheThao
 
     void setMUCDOBAOTRI(string MucDoBaoTri);
     string getMUCDOBAOTRI();
-
+    //input override function
     virtual void input() override;
+    //output override function
     virtual void output() override;
+    // destructor function
+    virtual ~SanBongNamNguoi();
 };
 
 #endif

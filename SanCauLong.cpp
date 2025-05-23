@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-//ham set va get
+// setter and getter function
 void SanCauLong :: setSoLuongCotLuoi(string soluongCotLuoi)
 {
     this->soluongCotLuoi=soluongCotLuoi;
@@ -115,7 +115,7 @@ string SanCauLong::getDonVi_QuanLy()
 {
     return this->donvi_QuanLy;
 }
-//contructor khong tham so
+//constructor without parameters
 SanCauLong::SanCauLong()
 {
     this->loaiSan = "SanCauLong";
@@ -137,7 +137,7 @@ SanCauLong::SanCauLong()
     this->mucdo_HuHong = "Khong Xac Dinh";
     this->donvi_QuanLy = "Khong Xac Dinh";
 }
-//contructor co tham so
+//constructor with parameters
 SanCauLong::SanCauLong(
             string soluongCotLuoi, string docaoCuaLuoi, string matSan, string mucChongTham,
             string coThamTruot, string soLuongVot, string soLuongCau,string coPhongKhoiDong,
@@ -161,7 +161,7 @@ SanCauLong::SanCauLong(
     this->donvi_QuanLy = donvi_QuanLy;
 }
 
-//ham input
+// input function
 void SanCauLong::input()
 {
     cout << "\n--- THONG TIN SAN CAU LONG---\n";
@@ -169,10 +169,6 @@ void SanCauLong::input()
     cout << "Ma San: " << getMaSan() << endl;
     HeThongSanTheThao::input();
     cin.ignore();
-    cout<<"Nhap so luong cot luoi: ";
-    getline(cin,soluongCotLuoi);
-    cout<<"Nhap do cao cua luoi: ";
-    getline(cin,docaoCuaLuoi);
     cout<<"Mat San (Tham / Son)";
     getline(cin,matSan);
     if (matSan != "Co" && matSan != "Khong")
@@ -208,7 +204,7 @@ void SanCauLong::input()
     cout<<"Don vi quan ly: ";
     getline(cin,donvi_QuanLy);
 }
-//ham output
+// output function
 void SanCauLong::output()
 {
     cout<<"\n------THONG TIN SAN CAU LONG------\n";
@@ -225,4 +221,8 @@ void SanCauLong::output()
     cout<<"Lich su su dung: "<< lichsu_SuDung << endl;
     cout<<"Muc do hu hong: "<< mucdo_HuHong << endl;
     cout<<"Don vi quan ly: "<< donvi_QuanLy << endl; 
+}
+//destructor function
+SanCauLong::~SanCauLong() {
+    cout << "Destructor of SanCauLong is called!" << endl;
 }
