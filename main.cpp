@@ -43,6 +43,7 @@ int main()
                 break;
             case 4:
                 quanLySan.hienthi_SanTheoMaSan();
+                break;
             case 5:
                 quanLySan.sapxep_TheoGio();
                 break;
