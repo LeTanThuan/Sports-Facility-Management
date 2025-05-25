@@ -57,7 +57,8 @@ class QLyHeThongSanTheThao
     void thongke_TheoKhoangGia();
     // function to lookup active time
     void traCuuThoiGianHoatDong();
-
+    //function to read data from file
+    void docDuLieuTuFileDSSan();
 };
 
 #endif

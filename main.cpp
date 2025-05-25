@@ -10,6 +10,7 @@ int main()
 {
     QLyHeThongSanTheThao quanLySan;
     int choose;
+    //do while
     do {
         cout <<"\n===== MENU QUAN LY SAN =====";
         cout <<"\n1. Nhap danh sach san";
@@ -27,10 +28,11 @@ int main()
         cout <<"\n13. Thong ke so luong theo loai";
         cout <<"\n14. Thong ke theo khoang gia";
         cout <<"\n15. Tra cuu thoi gian hoat dong cua tung san";
-        cout <<"\n16. Thoat";
+        cout <<"\n16. Doc du lieu tu file";
+        cout <<"\n17. Thoat Chuong Trinh!";
         cout <<"\nNhap lua chon cua ban: ";
         cin >> choose;
-
+        //switch case
         switch (choose) {
             case 1:
                 quanLySan.input();
@@ -76,12 +78,16 @@ int main()
                 break;
             case 15:
                 quanLySan.traCuuThoiGianHoatDong();
-            case 16:
+                break;
+            case 16: 
+                quanLySan.docDuLieuTuFileDSSan();
+                break;
+            case 17:
                 cout <<"Thoat chuong trinh!";
                 break;
             default:
                 cout <<"Lua chon khong hop le, vui long chon lai!";
         }
-    } while (choose != 16);
+    } while (choose != 17);
     return 0;
 }

@@ -11,7 +11,7 @@ int HeThongSanTheThao::counter_SPB = 1;
 //getter and setter
 void HeThongSanTheThao::setSoGioChoi(float SoGioChoi)
 {
-    SoGioChoi= SoGioChoi;
+    this->SoGioChoi= SoGioChoi;
 }
 float HeThongSanTheThao::getSoGioChoi()
 {
@@ -21,20 +21,20 @@ void HeThongSanTheThao::setMaSan(string masan)
 {
     if (masan == "SanBongBayNguoi") 
     {
-        maSan = "SBBN" + to_string(counter_SBBN++);
+        this->maSan = "SBBN" + to_string(counter_SBBN++);
     } else if (masan == "SanBongNamNguoi") 
     {
-        maSan = "SBNN" + to_string(counter_SBNN++);
+        this->maSan = "SBNN" + to_string(counter_SBNN++);
     }else if (masan == "SanCauLong")
     {
-        maSan = "SCL" + to_string(counter_SCL++);
+        this->maSan = "SCL" + to_string(counter_SCL++);
     }else if (masan == "SanPickleBall")
     {
-        maSan = "SPB" + to_string(counter_SPB++);
+        this->maSan = "SPB" + to_string(counter_SPB++);
     }
      else 
     {
-        maSan = "SAN" + to_string(rand() % 1000);
+        this->maSan = "SAN" + to_string(rand() % 1000);
     }
 
 }
@@ -44,7 +44,7 @@ string HeThongSanTheThao::getMaSan()
 }
 void HeThongSanTheThao::setTenSan(string tenSan)
 {
-    tenSan=tenSan;
+    this->tenSan=tenSan;
 }
 string HeThongSanTheThao::getTenSan()
 {
@@ -52,7 +52,7 @@ string HeThongSanTheThao::getTenSan()
 }
 void HeThongSanTheThao::setLoaiSan(string loaiSan)
 {
-    loaiSan=loaiSan;
+    this->loaiSan=loaiSan;
 }
 string HeThongSanTheThao::getLoaiSan()
 {
@@ -60,7 +60,7 @@ string HeThongSanTheThao::getLoaiSan()
 }
 void HeThongSanTheThao::setTinhTrang(string tinhTrang)
 {
-    tinhTrang=tinhTrang;
+    this->tinhTrang=tinhTrang;
 }
 string HeThongSanTheThao::getTinhTrang()
 {
@@ -68,7 +68,7 @@ string HeThongSanTheThao::getTinhTrang()
 }
 void HeThongSanTheThao::setGiaThue_TheoGio(float giathue_TheoGio)
 {
-    giathue_TheoGio=giathue_TheoGio;
+    this->giathue_TheoGio=giathue_TheoGio;
 }
 float HeThongSanTheThao::getGiaThue_TheoGio()
 {
@@ -76,7 +76,7 @@ float HeThongSanTheThao::getGiaThue_TheoGio()
 }
 void HeThongSanTheThao::setSoNguoiToiDa(int soNguoiToiDa)
 {
-    soNguoiToiDa=soNguoiToiDa;
+    this->soNguoiToiDa=soNguoiToiDa;
 }
 int HeThongSanTheThao::getSoNguoiToiDa()
 {
@@ -84,7 +84,7 @@ int HeThongSanTheThao::getSoNguoiToiDa()
 }
 void HeThongSanTheThao::setThoiGian_MoCua(string thoigian_MoCua)
 {
-    thoigian_MoCua=thoigian_MoCua;
+    this->thoigian_MoCua=thoigian_MoCua;
 }
 string HeThongSanTheThao::getThoiGian_MoCua()
 {
@@ -92,7 +92,7 @@ string HeThongSanTheThao::getThoiGian_MoCua()
 }
 void HeThongSanTheThao::setThoiGian_DongCua(string thoigian_DongCua)
 {
-    thoigian_DongCua=thoigian_DongCua;
+    this->thoigian_DongCua=thoigian_DongCua;
 }
 string HeThongSanTheThao::getThoiGian_DongCua()
 {
@@ -100,7 +100,7 @@ string HeThongSanTheThao::getThoiGian_DongCua()
 }
 void HeThongSanTheThao::setCoPhongThayDo(string coPhongThayDo)
 {
-    coPhongThayDo=coPhongThayDo;
+    this->coPhongThayDo=coPhongThayDo;
 }
 string HeThongSanTheThao::getCoPhongThayDo()
 {
@@ -108,7 +108,7 @@ string HeThongSanTheThao::getCoPhongThayDo()
 }
 void HeThongSanTheThao::setCoHeThongDen(string coHeThongDen)
 {
-    coHeThongDen=coHeThongDen;
+    this->coHeThongDen=coHeThongDen;
 }
 string HeThongSanTheThao::getCoHeThongDen()
 {
@@ -116,7 +116,7 @@ string HeThongSanTheThao::getCoHeThongDen()
 }
 void HeThongSanTheThao::setCoBaoHim(string coBaoHiem)
 {
-    coBaoHiem=coBaoHiem;
+    this->coBaoHiem=coBaoHiem;
 }
 string HeThongSanTheThao::getCoBaoHiem()
 {
@@ -124,7 +124,7 @@ string HeThongSanTheThao::getCoBaoHiem()
 }
 void HeThongSanTheThao::setNguoiQuanLy(string nguoiQuanLy)
 {
-    nguoiQuanLy=nguoiQuanLy;
+    this->nguoiQuanLy=nguoiQuanLy;
 }
 string HeThongSanTheThao::getNguoiQuanLy()
 {
@@ -132,7 +132,7 @@ string HeThongSanTheThao::getNguoiQuanLy()
 }
 void HeThongSanTheThao::setSoDienThoai_LienHe(string sodienthoai_LienHe)
 {
-    sodienthoai_LienHe=sodienthoai_LienHe;
+    this->sodienthoai_LienHe=sodienthoai_LienHe;
 }
 string HeThongSanTheThao::getSoDienThoai_LienHe()
 {
@@ -140,7 +140,7 @@ string HeThongSanTheThao::getSoDienThoai_LienHe()
 }
 void HeThongSanTheThao::setGiaThue()
 {
-    GiaThue= giathue_TheoGio * SoGioChoi;
+    this->GiaThue= giathue_TheoGio * SoGioChoi;
 }
 float HeThongSanTheThao::getGiaThue()
 {
@@ -223,11 +223,11 @@ void HeThongSanTheThao::input()
 // output function
 void HeThongSanTheThao::output()
 {
-    cout<<"Ma san: "<<maSan<<endl;
-    cout<<"Ten san: "<<tenSan<<endl;
-    cout<<"Loai san: "<<loaiSan<<endl;
+    cout<<"Ma san: "<<getMaSan()<<endl;
+    cout<<"Ten san: "<<getTenSan()<<endl;
+    cout<<"Loai san: "<<getLoaiSan()<<endl;
     cout<<"Tinh trang san: "<<tinhTrang<<endl;
-    cout<<"Gia thue(theo gio): "<<giathue_TheoGio<<endl;
+    cout<<"Gia thue(theo gio): "<<getGiaThue_TheoGio()<<endl;
     cout<<"Thoi gian mo cua: "<<thoigian_MoCua<<endl;
     cout<<"Thoi gian dong cua:"<<thoigian_DongCua<<endl;
     cout<<"Phong thay do: "<<coPhongThayDo<<endl;

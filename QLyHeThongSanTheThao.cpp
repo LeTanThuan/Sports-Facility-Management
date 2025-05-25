@@ -255,13 +255,12 @@ void QLyHeThongSanTheThao::xoasan_TheoMa()
 void QLyHeThongSanTheThao::luu_DanhSachRaFile() 
 {
     ofstream outFile("DanhSachSan.txt");
-
     if (!outFile) 
     {
         cout <<"Loi: Khong the mo file DanhSachSan.txt để ghi du lieu!" << endl;
         return;
     }
-
+    outFile << "MaSan TenSan LoaiSan SoGioChoi GiaThueTheoGio GiaThue" << endl;
     for (int i = 0; i < n; i++) 
     {
         outFile << list[i]->getMaSan() << " "
@@ -401,4 +400,50 @@ void QLyHeThongSanTheThao::traCuuThoiGianHoatDong() {
     {
         cout << "\nKhong tim thay san voi ma san da nhap!" << idSan << endl;
     }
+}
+//function to read data from file
+void QLyHeThongSanTheThao::docDuLieuTuFileDSSan() 
+{
+    ifstream inFile("DSSan.txt");
+    if (!inFile) 
+    {
+        cout << "Khong the mo file de doc du lieu!\n";
+        return;
+    }
+    string line;
+    getline(inFile, line);
+
+    string maSan, tenSan, loaiSan;
+    int soGioChoi;
+    float giaSan;
+    n = 0;
+    while (inFile >> maSan >> tenSan >> loaiSan >> soGioChoi >> giaSan) 
+    {
+        if (n >= 100) break;
+        if (loaiSan == "SanBongBayNguoi") 
+        {
+            list[n] = new SanBongBayNguoi();
+        } else if (loaiSan == "SanBongNamNguoi") 
+        {
+            list[n] = new SanBongNamNguoi();
+        } else if (loaiSan == "SanCauLong") 
+        {
+            list[n] = new SanCauLong();
+        } else if (loaiSan == "SanPickleBall") 
+        {
+            list[n] = new SanPickleBall();
+        } else 
+        {
+            continue;
+        }
+        list[n]->setMaSan(maSan);
+        list[n]->setTenSan(tenSan);
+        list[n]->setLoaiSan(loaiSan);
+        list[n]->setSoGioChoi(soGioChoi);
+        list[n]->setGiaThue_TheoGio(giaSan);
+        list[n]->setGiaThue();
+        n++;
+    }
+    inFile.close();
+    cout << "\nDa doc va luu thong tin cac san tu file!\n";
 }

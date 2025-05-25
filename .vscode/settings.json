@@ -10,6 +10,8 @@
         "xloctime": "cpp",
         "ostream": "cpp",
         "string": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "iosfwd": "cpp",
+        "fstream": "cpp"
     }
 }
